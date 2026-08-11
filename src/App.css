@@ -1087,6 +1087,62 @@ a {
 }
   }
 
+  /* MEMBERSHIP MOBILE */
+
+.membership {
+  padding: 95px 0;
+}
+
+.membership-inner {
+  width: min(100% - 34px, 1120px);
+}
+
+.membership-intro h2 {
+  font-size: clamp(2.35rem, 10vw, 3.35rem);
+}
+
+.membership-grid {
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 52px;
+}
+
+.membership-card {
+  min-height: auto;
+  padding: 28px 24px;
+}
+
+.membership-card-top {
+  min-height: auto;
+}
+
+
+.membership-price {
+  margin-top: 24px;
+}
+
+.price {
+  font-size: 3rem;
+}
+
+.membership-description {
+  max-width: 420px;
+}
+
+.membership-features {
+  margin: 28px 0 32px;
+}
+
+.membership-button {
+  width: 100%;
+}
+
+.membership-footnote {
+  margin-top: 28px;
+  padding: 0 12px;
+  line-height: 1.5;
+}
+
 
   /* PRODUCT EXPERIENCE MOBILE */
 

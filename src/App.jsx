@@ -351,12 +351,33 @@ function App() {
       </p>
     </div>
 
-    <div className="product-devices">
+    <div className="product-devices-premium">
+
+  <div className="device-laptop">
+    <div className="device-laptop-screen">
       <img
-        src="/images/household-devices-clean-crop.png"
-        alt="Household shown on a laptop and mobile phone."
+        src="/images/household-dashboard-desktop.png"
+        alt="Household Family Picture dashboard on desktop."
       />
     </div>
+
+    <div className="device-laptop-base">
+      <div className="device-laptop-notch"></div>
+    </div>
+  </div>
+
+  <div className="device-phone">
+    <div className="device-phone-speaker"></div>
+
+    <div className="device-phone-screen">
+      <img
+        src="/images/household-dashboard-mobile.png"
+        alt="Household Family Picture on mobile."
+      />
+    </div>
+  </div>
+
+</div>
 
     <p className="product-note">
       Your household when you need it.

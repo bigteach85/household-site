@@ -1,30 +1,97 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <main>
       <header className="site-header">
-        <div className="nav-inner">
-          <a className="brand" href="/" aria-label="Our Household home">
-            <img
-              className="brand-logo"
-              src="/images/household-logo.png"
-              alt=""
-            />
-            <span className="brand-name">our household™</span>
-          </a>
+  <div className="nav-inner">
+    <a className="brand" href="/" aria-label="Our Household home">
+      <img
+        className="brand-logo"
+        src="/images/household-logo.png"
+        alt=""
+      />
+      <span className="brand-name">our household™</span>
+    </a>
 
-          <nav className="nav-links">
-            <a href="#story">Our story</a>
-            <a href="#prepared">Preparedness</a>
-            <a href="#trust">Trust</a>
-          </nav>
+<nav className="nav-links">
+  <a href="#story">Our story</a>
+  <a href="#prepared">Preparedness</a>
+  <a href="#trust">Trust</a>
+</nav>
 
-          <a className="sign-in" href="#">
-            Sign in
-          </a>
-        </div>
-      </header>
+<a className="sign-in desktop-sign-in" href="#">
+  Sign in
+</a>
+
+<button
+  className={`mobile-menu-button ${menuOpen ? "is-open" : ""}`}
+  type="button"
+  aria-label={menuOpen ? "Close menu" : "Open menu"}
+  aria-expanded={menuOpen}
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  {!menuOpen ? (
+  <span className="menu-symbol" aria-hidden="true">
+    <span></span>
+    <span></span>
+  </span>
+) : (
+  <span className="menu-close">×</span>
+)}
+</button>
+  </div>
+
+  <div className={`mobile-menu ${menuOpen ? "is-open" : ""}`}>
+    <div className="mobile-menu-inner">
+      <div className="mobile-menu-brand">
+        <img
+          src="/images/household-logo.png"
+          alt=""
+        />
+        <span>our household™</span>
+      </div>
+
+      <nav className="mobile-menu-links">
+        <a
+          href="#story"
+          onClick={() => setMenuOpen(false)}
+        >
+          Our story
+        </a>
+
+        <a
+          href="#prepared"
+          onClick={() => setMenuOpen(false)}
+        >
+          Preparedness
+        </a>
+
+        <a
+          href="#trust"
+          onClick={() => setMenuOpen(false)}
+        >
+          Trust
+        </a>
+      </nav>
+
+      <a
+        className="mobile-enter"
+        href="#"
+        onClick={() => setMenuOpen(false)}
+      >
+        Enter Household
+      </a>
+
+      <p className="mobile-menu-signature">
+        20 seconds. Clarity. Back to life.
+      </p>
+    </div>
+  </div>
+</header>
 
       <section className="hero">
         <div className="hero-inner">

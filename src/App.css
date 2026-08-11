@@ -1035,6 +1035,31 @@ a {
     grid-template-columns: 1fr;
     gap: 8px;
   }
+
+
+  /* PRODUCT EXPERIENCE MOBILE */
+
+  .product-experience {
+    padding: 95px 0 85px;
+  }
+
+  .product-experience-inner {
+    width: min(100% - 34px, 1120px);
+  }
+
+  .product-intro h2 {
+    font-size: clamp(2.35rem, 10vw, 3.35rem);
+  }
+
+  .product-devices {
+    width: 115%;
+    margin: 52px 0 42px;
+    transform: translateX(-6.5%);
+  }
+
+  .product-note {
+    font-size: 1.55rem;
+  }
 }
 
 /* MOBILE HOUSEHOLD MENU */
@@ -1355,4 +1380,66 @@ a {
     object-fit: cover;
     object-position: 58% center;
   }
+}
+
+/* PRODUCT EXPERIENCE */
+
+.product-experience {
+  padding: 145px 0 130px;
+  background: #f4f2eb;
+  color: #10231d;
+  overflow: hidden;
+}
+
+.product-experience-inner {
+  width: min(100% - 64px, 1120px);
+  margin: 0 auto;
+}
+
+.product-intro {
+  max-width: 760px;
+}
+
+.product-intro h2 {
+  margin: 20px 0 28px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 5vw, 5.3rem);
+  line-height: 0.98;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.product-intro h2 em {
+  font-weight: 400;
+}
+
+.product-intro > p:last-child {
+  max-width: 610px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.76;
+}
+
+.product-devices {
+  width: min(100%, 1040px);
+  margin: 75px auto 55px;
+}
+
+.product-devices img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-note {
+  margin: 0 auto;
+  text-align: center;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.product-note em {
+  font-weight: 400;
 }

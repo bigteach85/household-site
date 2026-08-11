@@ -333,6 +333,39 @@ function App() {
         </div>
       </section>
 
+<section className="product-experience">
+  <div className="product-experience-inner">
+    <div className="product-intro">
+      <p className="eyebrow dark-eyebrow">YOUR HOUSEHOLD, TOGETHER</p>
+
+      <h2>
+        Everything that matters at home.
+        <br />
+        <em>One understandable picture.</em>
+      </h2>
+
+      <p>
+        Accounts. Bills. Documents. Plans. The people you care for.
+        Household brings the important parts of family life together
+        without giving you another system to constantly manage.
+      </p>
+    </div>
+
+    <div className="product-devices">
+      <img
+        src="/images/household-devices-clean-crop.png"
+        alt="Household shown on a laptop and mobile phone."
+      />
+    </div>
+
+    <p className="product-note">
+      Your household when you need it.
+      <br />
+      <em>Your life when you don't.</em>
+    </p>
+  </div>
+</section>
+
       <section className="presence">
         <div className="presence-inner">
           <p className="eyebrow">BUILT FOR PRESENCE</p>

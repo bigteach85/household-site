@@ -18,8 +18,9 @@ function App() {
     </a>
 
 <nav className="nav-links">
-  <a href="#story">Our story</a>
+  <a href="#story">Where it started</a>
   <a href="#prepared">Preparedness</a>
+  <a href="#membership">Membership</a>
   <a href="#trust">Trust</a>
 </nav>
 
@@ -35,13 +36,13 @@ function App() {
   onClick={() => setMenuOpen(!menuOpen)}
 >
   {!menuOpen ? (
-  <span className="menu-symbol" aria-hidden="true">
-    <span></span>
-    <span></span>
-  </span>
-) : (
-  <span className="menu-close">×</span>
-)}
+    <span className="menu-symbol" aria-hidden="true">
+      <span></span>
+      <span></span>
+    </span>
+  ) : (
+    <span className="menu-close">×</span>
+  )}
 </button>
   </div>
 
@@ -68,6 +69,13 @@ function App() {
           onClick={() => setMenuOpen(false)}
         >
           Preparedness
+        </a>
+
+        <a
+          href="#membership"
+          onClick={() => setMenuOpen(false)}
+        >
+          Membership
         </a>
 
         <a
@@ -108,9 +116,13 @@ function App() {
             without spending your life managing it.
           </p>
 
-          <p className="hero-signature">
-            20 seconds. Clarity. Back to life.
-          </p>
+          <div className="hero-promise">
+            <strong>20 seconds. Clarity. Back to life.</strong>
+            <p>
+              Household is not designed to hold your attention. It is designed
+              to give you enough understanding to act, then get out of the way.
+            </p>
+          </div>
 
           <a className="hero-link" href="#life">
             See why we built it
@@ -141,40 +153,52 @@ function App() {
       <section className="story" id="story">
         <div className="story-inner">
           <div className="story-title">
-            <p className="eyebrow dark-eyebrow">OUR STORY</p>
+            <p className="eyebrow dark-eyebrow">WHERE IT STARTED</p>
 
             <h2>
-              It began at
+              It started in
               <br />
-              <em>our kitchen table.</em>
+              <em>our kitchen.</em>
             </h2>
           </div>
 
           <div className="story-copy">
             <p className="story-lead">
-              We didn't need another budgeting tool.
-              We needed a calmer way to run our life together.
+              My wife and I kept having the same conversations about bills.
             </p>
 
             <p>
-              Bills. Accounts. School. Insurance. Documents.
-              The house. The cars. The people we love.
+              Everything felt scattered. Accounts in one place. Bills in another.
+              Spreadsheets we stopped updating. Dozens of apps that never really
+              stuck.
             </p>
 
             <p>
-              None of it was particularly complicated on its own.
-              It was complicated because it was everywhere.
+              And because thinking about all of it felt stressful, it became easier
+              to push it out of mind.
             </p>
+
+            <div className="story-realization">
+              <p>Then I had a different thought:</p>
+
+              <blockquote>
+                What if managing your household didn't make you more anxious?
+                <br />
+                <em>What if it actually made you feel calmer?</em>
+              </blockquote>
+            </div>
+
+            <p>That became Household.</p>
 
             <p className="story-close">
-              Household brings the pieces together so a family can
-              understand what matters—and then get back to living.
+              Not another app asking for more attention. A place to understand
+              what matters, see what needs attention, and get back to your life.
             </p>
           </div>
         </div>
       </section>
 
-          <section className="understanding">
+      <section className="understanding">
         <div className="understanding-inner">
           <p className="eyebrow dark-eyebrow">ONE HOME. ONE PICTURE.</p>
 
@@ -333,174 +357,163 @@ function App() {
         </div>
       </section>
 
-<section className="product-experience">
-  <div className="product-experience-inner">
-    <div className="product-intro">
-      <p className="eyebrow dark-eyebrow">YOUR HOUSEHOLD, TOGETHER</p>
 
-      <h2>
-        Everything that matters at home.
-        <br />
-        <em>One understandable picture.</em>
-      </h2>
+      <section className="product-experience">
+        <div className="product-experience-inner">
+          <div className="product-intro">
+            <p className="eyebrow dark-eyebrow">YOUR HOUSEHOLD, TOGETHER</p>
 
-      <p>
-        Accounts. Bills. Documents. Plans. The people you care for.
-        Household brings the important parts of family life together
-        without giving you another system to constantly manage.
-      </p>
-    </div>
+            <h2>
+              Everything that matters at home.
+              <br />
+              <em>One understandable picture.</em>
+            </h2>
 
-    <div className="product-devices-premium">
-
-  <div className="device-laptop">
-    <div className="device-laptop-screen">
-      <img
-        src="/images/household-dashboard-desktop.png"
-        alt="Household Family Picture dashboard on desktop."
-      />
-    </div>
-
-    <div className="device-laptop-base">
-      <div className="device-laptop-notch"></div>
-    </div>
-  </div>
-
-  <div className="device-phone">
-    <div className="device-phone-speaker"></div>
-
-    <div className="device-phone-screen">
-      <img
-        src="/images/household-dashboard-mobile.png"
-        alt="Household Family Picture on mobile."
-      />
-    </div>
-  </div>
-
-</div>
-
-    <p className="product-note">
-      Your household when you need it.
-      <br />
-      <em>Your life when you don't.</em>
-    </p>
-  </div>
-</section>
-
-<section className="membership" id="membership">
-  <div className="membership-inner">
-    <div className="membership-intro">
-      <p className="eyebrow dark-eyebrow">MEMBERSHIP</p>
-
-      <h2>
-        One plan for every stage
-        <br />
-        <em>of family life.</em>
-      </h2>
-
-      <p>
-        Start free. Upgrade only when Household becomes
-        part of your routine.
-      </p>
-    </div>
-
-    <div className="membership-grid">
-
-      <article className="membership-card">
-        <div className="membership-card-top">
-          <p className="membership-label">HOUSEHOLD FREE</p>
-
-          <div className="membership-price">
-            <span className="price">$0</span>
-            <span className="price-period">forever</span>
+            <p>
+              Accounts. Bills. Documents. Plans. The people you care for.
+              Household brings the important parts of family life together
+              without giving you another system to constantly manage.
+            </p>
           </div>
 
-          <p className="membership-description">
-            A calm place to begin organizing your household.
+          <div className="product-devices-premium">
+            <div className="device-laptop">
+              <div className="device-laptop-screen">
+                <img
+                  src="/images/household-dashboard-desktop.png"
+                  alt="Household Family Picture dashboard on desktop."
+                />
+              </div>
+              <div className="device-laptop-base">
+                <div className="device-laptop-notch"></div>
+              </div>
+            </div>
+
+            <div className="device-phone">
+              <div className="device-phone-speaker"></div>
+              <div className="device-phone-screen">
+                <img
+                  src="/images/household-dashboard-mobile.png"
+                  alt="Household Family Picture on mobile."
+                />
+              </div>
+            </div>
+          </div>
+
+          <p className="product-note">
+            Your household when you need it.
+            <br />
+            <em>Your life when you don't.</em>
           </p>
         </div>
+      </section>
 
-        <ul className="membership-features">
-          <li>Personal household overview</li>
-          <li>Manual accounts and balances</li>
-          <li>Essential household information</li>
-          <li>Basic document organization</li>
-          <li>One household member</li>
-        </ul>
+      <section className="membership" id="membership">
+        <div className="membership-inner">
+          <div className="membership-intro">
+            <p className="eyebrow dark-eyebrow">MEMBERSHIP</p>
 
-        <a className="membership-button secondary" href="#">
-          Start free
-        </a>
-      </article>
+            <h2>
+              One plan for every stage
+              <br />
+              <em>of family life.</em>
+            </h2>
 
-      <article className="membership-card membership-featured">
-        <div className="membership-card-top">
-          <div className="membership-heading-row">
-            <p className="membership-label">HOUSEHOLD PLUS</p>
-            <span className="membership-recommended">MOST HOUSEHOLDS</span>
+            <p>
+              Start free. Upgrade only when Household becomes part of your routine.
+            </p>
           </div>
 
-          <div className="membership-price">
-            <span className="price">$12</span>
-            <span className="price-period">/ month</span>
+          <div className="membership-grid">
+            <article className="membership-card">
+              <div className="membership-card-top">
+                <p className="membership-label">HOUSEHOLD FREE</p>
+                <div className="membership-price">
+                  <span className="price">$0</span>
+                  <span className="price-period">forever</span>
+                </div>
+                <p className="membership-description">
+                  A calm place to begin organizing your household.
+                </p>
+              </div>
+
+              <ul className="membership-features">
+                <li>Personal household overview</li>
+                <li>Manual accounts and balances</li>
+                <li>Essential household information</li>
+                <li>Basic document organization</li>
+                <li>One household member</li>
+              </ul>
+
+              <a className="membership-button secondary" href="#">
+                Start free
+              </a>
+            </article>
+
+            <article className="membership-card membership-featured">
+              <div className="membership-card-top">
+                <div className="membership-heading-row">
+                  <p className="membership-label">HOUSEHOLD PLUS</p>
+                  <span className="membership-recommended">MOST HOUSEHOLDS</span>
+                </div>
+
+                <div className="membership-price">
+                  <span className="price">$12</span>
+                  <span className="price-period">/ month</span>
+                </div>
+
+                <p className="membership-description">
+                  For couples and families who want Household connected and
+                  working with them.
+                </p>
+              </div>
+
+              <ul className="membership-features">
+                <li>Everything in Household Free</li>
+                <li>Connected financial accounts</li>
+                <li>Bills and household cash flow</li>
+                <li>Expanded document organization</li>
+                <li>Household insights</li>
+                <li>Up to two adults</li>
+              </ul>
+
+              <a className="membership-button primary" href="#">
+                Choose Plus
+              </a>
+            </article>
+
+            <article className="membership-card">
+              <div className="membership-card-top">
+                <p className="membership-label">HOUSEHOLD FAMILY</p>
+                <div className="membership-price">
+                  <span className="price">$25</span>
+                  <span className="price-period">/ month</span>
+                </div>
+                <p className="membership-description">
+                  For the whole family—and the plans that help everyone stay prepared.
+                </p>
+              </div>
+
+              <ul className="membership-features">
+                <li>Everything in Household Plus</li>
+                <li>Up to ten household members</li>
+                <li>Household Network</li>
+                <li>Recovery Companion</li>
+                <li>Estate Planning Companion</li>
+                <li>Long-term household planning</li>
+              </ul>
+
+              <a className="membership-button secondary" href="#">
+                Choose Family
+              </a>
+            </article>
           </div>
 
-          <p className="membership-description">
-            For couples and families who want Household
-            connected and working with them.
+          <p className="membership-footnote">
+            No pressure to upgrade. Household should earn its place in your life.
           </p>
         </div>
-
-        <ul className="membership-features">
-          <li>Everything in Household Free</li>
-          <li>Connected financial accounts</li>
-          <li>Bills and household cash flow</li>
-          <li>Expanded document organization</li>
-          <li>Household insights</li>
-          <li>Up to two adults</li>
-        </ul>
-
-        <a className="membership-button primary" href="#">
-          Choose Plus
-        </a>
-      </article>
-
-      <article className="membership-card">
-        <div className="membership-card-top">
-          <p className="membership-label">HOUSEHOLD FAMILY</p>
-
-          <div className="membership-price">
-            <span className="price">$25</span>
-            <span className="price-period">/ month</span>
-          </div>
-
-          <p className="membership-description">
-            For the whole family—and the plans that help
-            everyone stay prepared.
-          </p>
-        </div>
-
-        <ul className="membership-features">
-          <li>Everything in Household Plus</li>
-          <li>Up to ten household members</li>
-          <li>Household Network</li>
-          <li>Recovery Companion</li>
-          <li>Estate Planning Companion</li>
-          <li>Long-term household planning</li>
-        </ul>
-
-        <a className="membership-button secondary" href="#">
-          Choose Family
-        </a>
-      </article>
-
-    </div>
-
-    <p className="membership-footnote">
-      No pressure to upgrade. Household should earn its place in your life.
-    </p>
-  </div>
-</section>
+      </section>
 
       <section className="presence">
         <div className="presence-inner">
@@ -637,8 +650,9 @@ function App() {
           </div>
 
           <div className="footer-links">
-            <a href="#story">Our story</a>
+            <a href="#story">Where it started</a>
             <a href="#prepared">Preparedness</a>
+            <a href="#membership">Membership</a>
             <a href="#trust">Trust</a>
           </div>
 

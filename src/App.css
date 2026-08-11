@@ -1034,138 +1034,6 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     gap: 8px;
-
-    .product-devices-premium {
-  width: 100%;
-
-  margin: 55px auto 48px;
-  padding: 0 0 72px;
-}
-
-.device-laptop {
-  width: 100%;
-}
-
-.device-laptop-screen {
-  padding: 5px;
-  border-radius: 11px 11px 6px 6px;
-}
-
-.device-laptop-screen img {
-  border-radius: 6px;
-}
-
-.device-laptop-base {
-  height: 10px;
-}
-
-.device-laptop-notch {
-  width: 55px;
-  height: 3px;
-}
-
-.device-phone {
-  width: 29%;
-  min-width: 105px;
-
-  right: -2%;
-  bottom: 0;
-
-  padding: 4px;
-
-  border-radius: 20px;
-}
-
-.device-phone-screen {
-  border-radius: 16px;
-}
-
-.device-phone-speaker {
-  top: 7px;
-  width: 24px;
-  height: 3px;
-}
-  }
-
-  /* MEMBERSHIP MOBILE */
-
-.membership {
-  padding: 95px 0;
-}
-
-.membership-inner {
-  width: min(100% - 34px, 1120px);
-}
-
-.membership-intro h2 {
-  font-size: clamp(2.35rem, 10vw, 3.35rem);
-}
-
-.membership-grid {
-  grid-template-columns: 1fr;
-  gap: 14px;
-  margin-top: 52px;
-}
-
-.membership-card {
-  min-height: auto;
-  padding: 28px 24px;
-}
-
-.membership-card-top {
-  min-height: auto;
-}
-
-
-.membership-price {
-  margin-top: 24px;
-}
-
-.price {
-  font-size: 3rem;
-}
-
-.membership-description {
-  max-width: 420px;
-}
-
-.membership-features {
-  margin: 28px 0 32px;
-}
-
-.membership-button {
-  width: 100%;
-}
-
-.membership-footnote {
-  margin-top: 28px;
-  padding: 0 12px;
-  line-height: 1.5;
-}
-
-
-  /* PRODUCT EXPERIENCE MOBILE */
-
-  .product-experience {
-    padding: 95px 0 85px;
-  }
-
-  .product-experience-inner {
-    width: min(100% - 34px, 1120px);
-  }
-
-  .product-intro h2 {
-    font-size: clamp(2.35rem, 10vw, 3.35rem);
-  }
-
-  .product-devices {
-    width: 115%;
-    margin: 52px 0 42px;
-    transform: translateX(-6.5%);
-  }
-
-  .product-note {
-    font-size: 1.55rem;
   }
 }
 
@@ -1527,174 +1395,15 @@ a {
   opacity: 0.76;
 }
 
-/* PREMIUM PRODUCT DEVICES */
-
-.product-devices-premium {
-  position: relative;
-
-  width: min(100%, 1080px);
-  margin: 90px auto 70px;
-  padding: 0 56px 80px 0;
+.product-devices {
+  width: min(100%, 1040px);
+  margin: 75px auto 55px;
 }
 
-/* LAPTOP */
-
-.device-laptop {
-  position: relative;
-  width: 88%;
-  margin: 0 auto;
-}
-
-.device-laptop-screen {
-  position: relative;
-
-  padding: 10px;
-
-  background: #151918;
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 18px 18px 9px 9px;
-
-  box-shadow:
-    0 28px 70px rgba(21, 30, 24, 0.16),
-    0 8px 24px rgba(21, 30, 24, 0.10);
-}
-
-.device-laptop-screen::before {
-  content: "";
-
-  position: absolute;
-  top: 4px;
-  left: 50%;
-
-  width: 4px;
-  height: 4px;
-
-  transform: translateX(-50%);
-
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.18);
-}
-
-.device-laptop-screen img {
+.product-devices img {
   display: block;
-
-  width: 100%;
-  aspect-ratio: 1.92 / 1;
-
-  object-fit: cover;
-  object-position: center top;
-
-  border-radius: 10px;
-}
-
-.device-laptop-base {
-  position: relative;
-
-  width: 108%;
-  height: 16px;
-
-  margin-left: -4%;
-
-  background:
-    linear-gradient(
-      180deg,
-      #d6d7d3 0%,
-      #aeb0ad 55%,
-      #777a78 100%
-    );
-
-  border-radius: 2px 2px 14px 14px;
-
-  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.11);
-}
-
-.device-laptop-base::after {
-  content: "";
-
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  bottom: -5px;
-
-  height: 5px;
-
-  background: #8e918e;
-
-  border-radius: 0 0 50% 50%;
-}
-
-.device-laptop-notch {
-  position: absolute;
-  top: 0;
-  left: 50%;
-
-  width: 90px;
-  height: 5px;
-
-  transform: translateX(-50%);
-
-  background: #929492;
-
-  border-radius: 0 0 7px 7px;
-}
-
-/* PHONE */
-
-.device-phone {
-  position: absolute;
-
-  width: 21%;
-  min-width: 170px;
-
-  right: 3%;
-  bottom: 0;
-
-  padding: 7px;
-
-  background: #121514;
-
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 30px;
-
-  box-shadow:
-    0 26px 55px rgba(18, 27, 22, 0.22),
-    0 8px 20px rgba(18, 27, 22, 0.12);
-
-  transform: rotate(1.5deg);
-}
-
-.device-phone-screen {
-  overflow: hidden;
-
-  border-radius: 24px;
-
-  background: #06110d;
-}
-
-.device-phone-screen img {
-  display: block;
-
   width: 100%;
   height: auto;
-}
-
-.device-phone-speaker {
-  position: absolute;
-
-  z-index: 2;
-
-  top: 11px;
-  left: 50%;
-
-  width: 38px;
-  height: 4px;
-
-  transform: translateX(-50%);
-
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.16);
 }
 
 .product-note {
@@ -1708,6 +1417,195 @@ a {
 
 .product-note em {
   font-weight: 400;
+}
+
+/* =========================================================
+   HOUSEHOLD — LATEST LANDING PAGE OVERRIDES
+   ========================================================= */
+
+/* HERO CORE PROMISE */
+
+.hero-promise {
+  max-width: 590px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.hero-promise strong {
+  display: block;
+  color: var(--household-green);
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.hero-promise p {
+  max-width: 540px;
+  margin: 12px 0 0;
+  color: rgba(245, 247, 243, 0.58);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* WHERE IT STARTED */
+
+.story-realization {
+  margin: 44px 0;
+  padding: 30px 0;
+  border-top: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
+}
+
+.story-realization > p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.story-realization blockquote {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.story-realization blockquote em {
+  color: #578a24;
+  font-weight: 400;
+}
+
+/* PREMIUM PRODUCT DEVICES — REFINED */
+
+.product-devices-premium {
+  position: relative;
+  width: min(100%, 1000px);
+  margin: 85px auto 70px;
+  padding: 0 70px 72px 0;
+}
+
+.device-laptop {
+  position: relative;
+  width: 82%;
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.device-laptop-screen {
+  position: relative;
+  padding: 7px;
+  background: #151918;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px 14px 7px 7px;
+  box-shadow:
+    0 26px 60px rgba(21, 30, 24, 0.15),
+    0 7px 18px rgba(21, 30, 24, 0.08);
+}
+
+.device-laptop-screen::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.device-laptop-screen img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+}
+
+.device-laptop-base {
+  position: relative;
+  width: 104%;
+  height: 10px;
+  margin-left: -2%;
+  background: linear-gradient(
+    180deg,
+    #d6d7d3 0%,
+    #aeb0ad 58%,
+    #858885 100%
+  );
+  border-radius: 1px 1px 10px 10px;
+  box-shadow: 0 9px 14px rgba(0, 0, 0, 0.1);
+}
+
+.device-laptop-base::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: -3px;
+  height: 3px;
+  background: #8e918e;
+  border-radius: 0 0 50% 50%;
+}
+
+.device-laptop-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 70px;
+  height: 3px;
+  transform: translateX(-50%);
+  background: #929492;
+  border-radius: 0 0 6px 6px;
+}
+
+.device-phone {
+  position: absolute;
+  width: 18%;
+  min-width: 138px;
+  max-width: 168px;
+  right: 6%;
+  bottom: 0;
+  padding: 5px;
+  background: #121514;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 27px;
+  box-shadow:
+    0 23px 48px rgba(18, 27, 22, 0.2),
+    0 7px 17px rgba(18, 27, 22, 0.1);
+  transform: rotate(1deg);
+}
+
+.device-phone-screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #06110d;
+}
+
+.device-phone-screen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.device-phone-speaker {
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  left: 50%;
+  width: 34px;
+  height: 4px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
 }
 
 /* MEMBERSHIP */
@@ -1729,7 +1627,6 @@ a {
 
 .membership-intro h2 {
   margin: 20px 0 28px;
-
   font-family: var(--serif);
   font-size: clamp(2.8rem, 4.5vw, 4.6rem);
   font-weight: 400;
@@ -1745,7 +1642,6 @@ a {
 .membership-intro > p:last-child {
   max-width: 540px;
   margin: 0;
-
   color: var(--muted);
   font-size: 1.03rem;
   line-height: 1.7;
@@ -1755,17 +1651,14 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-
   margin-top: 75px;
 }
 
 .membership-card {
   min-height: 560px;
   padding: 34px;
-
   display: flex;
   flex-direction: column;
-
   background: var(--paper);
   border: 1px solid var(--line-light);
 }
@@ -1790,7 +1683,6 @@ a {
 .membership-label,
 .membership-recommended {
   margin: 0;
-
   font-size: 0.65rem;
   font-weight: 650;
   letter-spacing: 0.12em;
@@ -1807,7 +1699,6 @@ a {
 
 .membership-price {
   margin-top: 28px;
-
   display: flex;
   align-items: baseline;
   gap: 7px;
@@ -1827,7 +1718,6 @@ a {
 
 .membership-description {
   margin: 22px 0 0;
-
   color: var(--muted);
   font-size: 0.92rem;
   line-height: 1.65;
@@ -1836,18 +1726,15 @@ a {
 .membership-features {
   margin: 30px 0 38px;
   padding: 0;
-
   list-style: none;
   border-top: 1px solid var(--line-light);
 }
 
 .membership-features li {
   padding: 13px 0;
-
   color: #485049;
   font-size: 0.84rem;
   line-height: 1.4;
-
   border-bottom: 1px solid var(--line-light);
 }
 
@@ -1861,11 +1748,9 @@ a {
   margin-top: auto;
   min-height: 46px;
   padding: 0 18px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 0.8rem;
   font-weight: 650;
 }
@@ -1882,9 +1767,191 @@ a {
 
 .membership-footnote {
   margin: 35px 0 0;
-
   color: #7b817b;
   font-family: var(--serif);
   font-size: 0.95rem;
   text-align: center;
+}
+
+/* FINAL MOBILE REFINEMENTS */
+
+@media (max-width: 800px) {
+  .hero-promise {
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+
+  .hero-promise p {
+    font-size: 0.86rem;
+  }
+
+  .story-realization {
+    margin: 34px 0;
+    padding: 24px 0;
+  }
+
+  .product-devices-premium {
+    width: 100%;
+    max-width: 520px;
+    margin: 55px auto 70px;
+    padding: 0 28px 120px 0;
+    position: relative;
+  }
+
+  .device-laptop {
+    width: 88%;
+    max-width: none;
+  }
+
+  .device-laptop-screen {
+    padding: 4px;
+    border-radius: 8px 8px 4px 4px;
+  }
+
+  .device-laptop-screen img {
+    border-radius: 4px;
+  }
+
+  .device-laptop-base {
+    height: 7px;
+  }
+
+  .device-laptop-notch {
+    width: 42px;
+    height: 2px;
+  }
+
+  .device-phone {
+    width: 23%;
+    min-width: 82px;
+    max-width: 105px;
+    right: 2%;
+    bottom: 18px;
+    padding: 3px;
+    border-radius: 18px;
+    transform: rotate(1deg);
+  }
+
+  .device-phone-screen {
+    aspect-ratio: 9 / 19.5;
+    border-radius: 15px;
+  }
+
+  .device-phone-speaker {
+    top: 6px;
+    width: 21px;
+    height: 2px;
+  }
+
+  .product-note {
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+  }
+
+  .membership {
+    padding: 95px 0;
+  }
+
+  .membership-inner {
+    width: min(100% - 34px, 1120px);
+  }
+
+  .membership-intro h2 {
+    font-size: clamp(2.35rem, 10vw, 3.35rem);
+  }
+
+  .membership-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 52px;
+  }
+
+  .membership-card {
+    min-height: auto;
+    padding: 28px 24px;
+  }
+
+  .membership-card-top {
+    min-height: auto;
+  }
+
+  .membership-price {
+    margin-top: 24px;
+  }
+
+  .price {
+    font-size: 3rem;
+  }
+
+  .membership-description {
+    max-width: 420px;
+  }
+
+  .membership-features {
+    margin: 28px 0 32px;
+  }
+
+  .membership-button {
+    width: 100%;
+  }
+
+  .membership-footnote {
+    margin-top: 28px;
+    padding: 0 12px;
+    line-height: 1.5;
+  }
+}
+
+/* MOBILE FULL-WIDTH CORRECTION — FINAL */
+
+@media (max-width: 800px) {
+  html,
+  body,
+  #root,
+  main {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .hero,
+  .life,
+  .story,
+  .understanding,
+  .prepared,
+  .network,
+  .product-experience,
+  .membership,
+  .presence,
+  .trust-section,
+  .enter,
+  .site-footer {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nav-inner,
+  .hero-inner,
+  .life-heading,
+  .story-inner,
+  .understanding-inner,
+  .prepared-intro,
+  .companion,
+  .prepared-principle,
+  .network-inner,
+  .product-experience-inner,
+  .membership-inner,
+  .presence-inner,
+  .trust-inner,
+  .enter-inner,
+  .footer-inner {
+    width: calc(100% - 34px);
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

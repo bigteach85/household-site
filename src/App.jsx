@@ -286,32 +286,61 @@ function App() {
           </div>
         </div>
 
-        <div className="companion">
-          <div className="companion-number">02</div>
+        <div className="companion estate-companion">
+  <div className="companion-number">02</div>
 
-          <div className="companion-content">
-            <p className="companion-label">ESTATE PLANNING COMPANION</p>
+  <div className="companion-content">
+    <p className="companion-label">ESTATE PLANNING COMPANION</p>
 
-            <h3>
-              Prepare while
-              <br />
-              <em>life is calm.</em>
-            </h3>
+    <h3>
+      This one started
+      <br />
+      <em>with my parents.</em>
+    </h3>
 
-            <p>
-              Bring the information your estate-planning attorney needs
-              together ahead of time. Once a professional plan is established,
-              Household helps your family know what exists, where it is and
-              who to contact.
-            </p>
+    <p className="estate-origin-lead">
+      Anytime I tried to talk with them about an estate plan,
+      it was easy to put off. It felt like something we could
+      deal with later.
+    </p>
 
-            <p className="companion-thought">
-              The attorney prepares the legal plan.
-              <br />
-              Household helps the family be ready to use it.
-            </p>
-          </div>
-        </div>
+    <p>
+      My wife works in estate planning, so I asked her a simple question:
+      what would the perfect client already have organized before they
+      ever walked into an attorney&apos;s office?
+    </p>
+
+    <p>
+      What documents would they bring? What information would they
+      already have together? What would make that first conversation
+      easier and reduce the time spent gathering basic information?
+    </p>
+
+    <p className="estate-origin-answer">
+      That question became the Estate Planning Companion.
+    </p>
+
+    <p>
+      Household helps a family organize the information and documents
+      that can help them prepare for an estate-planning conversation
+      and build a packet they can actually find when they need it.
+    </p>
+
+    <div className="estate-boundary">
+      <p>
+        It doesn&apos;t replace an attorney.
+        <br />
+        That was never the idea.
+      </p>
+    </div>
+
+    <p className="companion-thought estate-principle">
+      Get the family organized
+      <br />
+      before life makes it urgent.
+    </p>
+  </div>
+</div>
 
         <div className="prepared-principle">
           <p>

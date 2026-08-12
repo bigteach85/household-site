@@ -1955,3 +1955,54 @@ a {
     margin-right: auto;
   }
 }
+
+/* Estate Planning Companion — origin story */
+
+.estate-companion .companion-content {
+  max-width: 760px;
+}
+
+.estate-origin-lead {
+  font-size: clamp(1.08rem, 1.6vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.estate-origin-answer {
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+}
+
+.estate-boundary {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.estate-boundary p {
+  margin: 0;
+  opacity: 0.78;
+}
+
+.estate-principle {
+  margin-top: 2rem;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.45;
+}
+
+@media (max-width: 720px) {
+  .estate-companion .companion-content {
+    max-width: 100%;
+  }
+
+  .estate-origin-lead,
+  .estate-origin-answer,
+  .estate-principle {
+    font-size: inherit;
+  }
+
+  .estate-boundary {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+}

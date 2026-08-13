@@ -2006,3 +2006,279 @@ a {
     padding-top: 1.25rem;
   }
 }
+
+/* =========================================================
+   SOCIAL UNIT — LIGHTER HUMAN-CENTERED VISUAL PASS
+   ========================================================= */
+
+:root {
+  --deep-green: #0b1a13;
+  --deep-green-soft: #10241a;
+  --paper: #f7f4ed;
+  --paper-soft: #eeeae1;
+  --ink: #18211c;
+  --muted: #66706a;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(247, 244, 237, 0.94);
+  color: var(--ink);
+  border-bottom: 1px solid rgba(24, 33, 28, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.brand-name,
+.sign-in {
+  color: var(--deep-green);
+}
+
+.nav-links {
+  color: rgba(24, 33, 28, 0.64);
+}
+
+.nav-links a:hover,
+.sign-in:hover {
+  color: var(--deep-green);
+}
+
+.menu-symbol span {
+  background: var(--deep-green);
+}
+
+.hero {
+  min-height: calc(90vh - 84px);
+  padding: 110px 0 105px;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 80% 28%, rgba(183, 255, 84, 0.13), transparent 24%),
+    linear-gradient(180deg, #fcfbf7 0%, var(--paper) 100%);
+}
+
+.hero h1 {
+  color: var(--deep-green);
+}
+
+.hero h1 em {
+  color: #4f7f25;
+}
+
+.hero-copy {
+  color: var(--muted);
+}
+
+.hero-signature {
+  color: var(--deep-green);
+}
+
+.hero-promise {
+  border-top: 1px solid rgba(24, 33, 28, 0.12);
+}
+
+.hero-promise strong {
+  color: #4f7f25;
+}
+
+.hero-promise p {
+  color: var(--muted);
+}
+
+.hero-link {
+  color: #4f7f25;
+  border-bottom-color: rgba(79, 127, 37, 0.42);
+}
+
+.life {
+  background: #fcfbf7;
+}
+
+.family-image {
+  width: min(1380px, calc(100% - 36px));
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow: 0 18px 50px rgba(22, 35, 28, 0.06);
+}
+
+.story,
+.trust-section,
+.membership {
+  background: #fcfbf7;
+}
+
+.understanding,
+.network,
+.product-experience {
+  background: var(--paper);
+}
+
+.understanding-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 90px;
+  border-top: 0;
+}
+
+.understanding-item {
+  display: block;
+  min-height: 280px;
+  padding: 30px;
+  background: #fcfbf7;
+  border: 1px solid rgba(24, 33, 28, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 12px 34px rgba(22, 35, 28, 0.035);
+}
+
+.understanding-item span {
+  display: block;
+  margin-bottom: 58px;
+}
+
+.understanding-item h3 {
+  margin-bottom: 16px;
+  color: var(--deep-green);
+}
+
+.prepared,
+.presence,
+.enter {
+  width: min(1380px, calc(100% - 36px));
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 32px;
+}
+
+.prepared {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  background:
+    radial-gradient(circle at 82% 15%, rgba(183, 255, 84, 0.07), transparent 25%),
+    var(--deep-green);
+  overflow: hidden;
+}
+
+.network-copy {
+  padding: 34px 40px 38px;
+  background: #fcfbf7;
+  border: 1px solid rgba(24, 33, 28, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 12px 34px rgba(22, 35, 28, 0.035);
+}
+
+.network-statement {
+  margin-top: 38px !important;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-light);
+  font-family: var(--serif);
+  font-size: 1.35rem !important;
+  font-weight: 400 !important;
+  color: var(--deep-green) !important;
+}
+
+.membership-card {
+  background: var(--paper);
+  border-radius: 22px;
+}
+
+.membership-featured {
+  background: #eef0e6;
+}
+
+.trust-point {
+  padding: 24px 26px;
+  margin-bottom: 12px;
+  background: var(--paper);
+  border: 1px solid rgba(24, 33, 28, 0.07);
+  border-radius: 18px;
+}
+
+.trust-points {
+  border-top: 0;
+}
+
+.trust-point {
+  border-bottom: 1px solid rgba(24, 33, 28, 0.07);
+}
+
+.presence {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.enter {
+  margin-top: 18px;
+  border-radius: 32px 32px 0 0;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: auto;
+    padding: 92px 0 84px;
+  }
+
+  .family-image {
+    width: calc(100% - 20px);
+    border-radius: 22px;
+  }
+
+  .understanding-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 62px;
+  }
+
+  .understanding-item {
+    min-height: 0;
+    padding: 26px;
+  }
+
+  .understanding-item span {
+    margin-bottom: 34px;
+  }
+
+  .understanding-item p {
+    grid-column: auto;
+  }
+
+  .prepared,
+  .presence,
+  .enter {
+    width: calc(100% - 20px);
+    max-width: none;
+  }
+
+  .network-copy {
+    padding: 28px;
+  }
+}
+
+/* =========================================================
+   BRAND EYEBROW REFINEMENT — LIGHT SURFACES
+   ========================================================= */
+
+/*
+  Lime green is reserved for dark Household surfaces.
+  On ivory/light surfaces, eyebrow labels use deep green so the
+  hierarchy feels quieter, more editorial, and more on-brand.
+*/
+
+.hero .eyebrow,
+.life .eyebrow,
+.story .eyebrow,
+.understanding .eyebrow,
+.network .eyebrow,
+.product-experience .eyebrow,
+.membership .eyebrow,
+.trust-section .eyebrow {
+  color: var(--deep-green);
+}
+
+/* Keep the accent green where it has enough contrast to feel intentional. */
+.prepared .eyebrow,
+.presence .eyebrow,
+.enter .eyebrow {
+  color: var(--household-green);
+}
+

@@ -51,34 +51,38 @@
 
 .membership-principle {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 225px);
+  column-gap: clamp(42px, 6vw, 84px);
 }
 
 .household-illustration--care {
-  position: absolute;
-  top: 48px;
-  right: 48px;
-  width: min(24%, 225px);
+  position: static;
+  grid-column: 2;
+  grid-row: 1 / span 5;
+  align-self: start;
+  width: 100%;
+  margin-top: 6px;
   opacity: 0.9;
 }
 
+.membership-principle > :not(.household-illustration--care) {
+  grid-column: 1;
+}
+
 @media (max-width: 800px) {
-  .household-illustration--coordination {
-    width: min(78vw, 270px);
-    margin-top: 38px;
+  .membership-principle {
+    grid-template-columns: 1fr;
   }
 
-  .household-illustration--documents {
-    width: min(70vw, 245px);
-    margin-top: 42px;
-  }
-
-  .household-illustration--access {
-    width: min(62vw, 215px);
-    margin-top: 36px;
+  .membership-principle > *,
+  .membership-principle > :not(.household-illustration--care) {
+    grid-column: 1;
   }
 
   .household-illustration--care {
     position: static;
+    grid-row: auto;
     width: min(62vw, 210px);
     margin: 28px 0 40px;
   }

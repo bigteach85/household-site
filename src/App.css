@@ -2,6 +2,7 @@
   --household-green: #b7ff54;
   --deep-green: #07110c;
   --deep-green-soft: #0b1710;
+  --illustration-green: #173f35;
 
   --paper: #f4f1ea;
   --paper-soft: #ebe8df;
@@ -15,6 +16,72 @@
 
   --serif: Georgia, "Times New Roman", serif;
   --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* HOUSEHOLD ILLUSTRATION SYSTEM
+   Quiet object studies in a single dark-green contour. Photography carries
+   human presence; illustration carries the evidence of care. */
+
+.household-illustration {
+  margin: 0;
+  pointer-events: none;
+}
+
+.household-illustration img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.household-illustration--coordination {
+  width: min(100%, 310px);
+  margin-top: 54px;
+}
+
+.household-illustration--documents {
+  width: min(100%, 290px);
+  margin: 64px 4% 0 auto;
+}
+
+.household-illustration--access {
+  width: min(100%, 245px);
+  margin-top: 58px;
+}
+
+.membership-principle {
+  position: relative;
+}
+
+.household-illustration--care {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  width: min(24%, 225px);
+  opacity: 0.9;
+}
+
+@media (max-width: 800px) {
+  .household-illustration--coordination {
+    width: min(78vw, 270px);
+    margin-top: 38px;
+  }
+
+  .household-illustration--documents {
+    width: min(70vw, 245px);
+    margin-top: 42px;
+  }
+
+  .household-illustration--access {
+    width: min(62vw, 215px);
+    margin-top: 36px;
+  }
+
+  .household-illustration--care {
+    position: static;
+    width: min(62vw, 210px);
+    margin: 28px 0 40px;
+  }
 }
 
 * {
@@ -2358,6 +2425,119 @@ a {
   color: var(--household-green);
 }
 
+/* =========================================================
+   HERO — REAL VERO BEACH FAMILY PHOTO
+   ========================================================= */
+
+.hero {
+  min-height: auto;
+  padding: 72px 0 84px;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(440px, 1.12fr);
+  gap: clamp(42px, 5vw, 78px);
+  align-items: center;
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+.hero h1 {
+  max-width: 690px;
+  font-size: clamp(3.15rem, 5.1vw, 5.45rem);
+}
+
+.hero-copy,
+.hero-promise {
+  max-width: 560px;
+}
+
+.hero-photo {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--paper-soft);
+  box-shadow: 0 24px 60px rgba(22, 35, 28, 0.1);
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.life {
+  padding-top: 102px;
+  padding-bottom: 110px;
+}
+
+@media (max-width: 980px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-content {
+    max-width: 760px;
+  }
+
+  .hero-photo img {
+    aspect-ratio: 16 / 10;
+    object-position: center 42%;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: auto;
+    padding: 64px 0 74px;
+  }
+
+  .hero-inner {
+    padding-top: 0;
+  }
+
+  .hero-layout {
+    gap: 38px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.55rem, 11.5vw, 3.75rem);
+  }
+
+  .hero-photo {
+    border-radius: 20px;
+  }
+
+  .hero-photo img {
+    aspect-ratio: 4 / 3;
+    object-position: center center;
+  }
+
+  .life {
+    padding-top: 76px;
+    padding-bottom: 84px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-photo {
+    width: calc(100% + 18px);
+    margin-left: -9px;
+  }
+
+  .hero-photo img {
+    aspect-ratio: 1 / 1;
+    object-position: 48% center;
+  }
+}
+
 
 /* MOBILE HERO POLISH */
 
@@ -3414,4 +3594,3 @@ a {
 .enter .eyebrow {
   color: var(--household-green);
 }
-

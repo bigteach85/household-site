@@ -102,32 +102,41 @@ function App() {
 </header>
 
       <section className="hero">
-        <div className="hero-inner">
-          <p className="eyebrow">HOUSEHOLD</p>
+        <div className="hero-inner hero-layout">
+          <div className="hero-content">
+            <p className="eyebrow">HOUSEHOLD</p>
 
-          <h1>
-            The people who depend
-            <br />
-            <em>on one another.</em>
-          </h1>
+            <h1>
+              The people who depend
+              <br />
+              <em>on one another.</em>
+            </h1>
 
-          <p className="hero-copy">
-            One private place to understand and coordinate the important
-            parts of life you share—for a calmer home.
-          </p>
-
-          <div className="hero-promise">
-            <strong>20 seconds. Clarity. Back to life.</strong>
-            <p>
-              Household is not designed to hold your attention. It is designed
-              to give you enough understanding to act, then get out of the way.
+            <p className="hero-copy">
+              One private place to understand and coordinate the important
+              parts of life you share—for a calmer home.
             </p>
+
+            <div className="hero-promise">
+              <strong>20 seconds. Clarity. Back to life.</strong>
+              <p>
+                Household is not designed to hold your attention. It is designed
+                to give you enough understanding to act, then get out of the way.
+              </p>
+            </div>
+
+            <a className="hero-link" href="#life">
+              See why we built it
+              <span aria-hidden="true">↓</span>
+            </a>
           </div>
 
-          <a className="hero-link" href="#life">
-            See why we built it
-            <span aria-hidden="true">↓</span>
-          </a>
+          <figure className="hero-photo">
+            <img
+              src="/images/household-hero-vero.jpg"
+              alt="A multigenerational family spending the day together in Vero Beach, Florida."
+            />
+          </figure>
         </div>
       </section>
 
@@ -142,12 +151,6 @@ function App() {
           </h2>
         </div>
 
-        <div className="family-image">
-          <img
-            src="/images/household-family-turtle.png"
-            alt="A family sharing a quiet moment together on the beach."
-          />
-        </div>
       </section>
 
       <section className="story" id="story">
@@ -160,6 +163,13 @@ function App() {
               <br />
               <em>our kitchen.</em>
             </h2>
+
+            <figure className="household-illustration household-illustration--coordination" aria-hidden="true">
+              <img
+                src="/images/illustrations/household-coordination.png"
+                alt=""
+              />
+            </figure>
           </div>
 
           <div className="story-copy">
@@ -216,6 +226,13 @@ function App() {
               or users.
             </p>
           </div>
+
+          <figure className="household-illustration household-illustration--documents" aria-hidden="true">
+            <img
+              src="/images/illustrations/household-documents.png"
+              alt=""
+            />
+          </figure>
 
           <div className="understanding-list">
             <div className="understanding-item">
@@ -362,6 +379,13 @@ function App() {
               <br />
               <em>seats.</em>
             </h2>
+
+            <figure className="household-illustration household-illustration--access" aria-hidden="true">
+              <img
+                src="/images/illustrations/household-trusted-access.png"
+                alt=""
+              />
+            </figure>
           </div>
 
           <div className="network-copy">
@@ -556,6 +580,13 @@ function App() {
 
     <div className="membership-principle">
       <p className="membership-principle-eyebrow">PEOPLE AREN'T SEATS.</p>
+
+      <figure className="household-illustration household-illustration--care" aria-hidden="true">
+        <img
+          src="/images/illustrations/household-care.png"
+          alt=""
+        />
+      </figure>
 
       <h3>We don't charge you more because more people matter to you.</h3>
 

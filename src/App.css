@@ -1056,7 +1056,7 @@ a {
   justify-content: center;
 
   position: relative;
-  z-index: 60;
+  z-index: 110;
 }
 
 .mobile-menu-button img {
@@ -1106,11 +1106,40 @@ a {
   }
 }
 
+.menu-symbol {
+  width: 24px;
+  height: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.menu-symbol span {
+  display: block;
+  height: 1px;
+  background: var(--deep-green);
+  border-radius: 999px;
+}
+
+.menu-symbol span:first-child {
+  width: 24px;
+}
+
+.menu-symbol span:last-child {
+  width: 16px;
+}
+
 .mobile-menu {
   position: fixed;
   inset: 0;
 
-  z-index: 50;
+  width: 100vw;
+  height: 100dvh;
+
+  z-index: 100;
 
   background:
     radial-gradient(
@@ -1126,9 +1155,11 @@ a {
   visibility: hidden;
   pointer-events: none;
 
+  overflow: hidden;
+
   transition:
-    opacity 260ms ease,
-    visibility 260ms ease;
+    opacity 240ms ease,
+    visibility 240ms ease;
 }
 
 .mobile-menu.is-open {
@@ -1139,19 +1170,27 @@ a {
 
 .mobile-menu-inner {
   width: min(100% - 34px, 600px);
-  min-height: 100%;
-  margin: auto;
+  height: 100dvh;
+  min-height: 0;
+  margin: 0 auto;
 
   display: flex;
   flex-direction: column;
 
-  padding: 26px 0 38px;
+  padding: 24px 0 28px;
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .mobile-menu-brand {
   display: flex;
   align-items: center;
   gap: 11px;
+
+  flex: 0 0 auto;
+
+  padding-right: 56px;
 
   color: var(--soft-white);
 
@@ -1169,19 +1208,23 @@ a {
   display: flex;
   flex-direction: column;
 
-  margin-top: auto;
-  margin-bottom: auto;
+  flex: 0 0 auto;
+
+  margin-top: 58px;
+  margin-bottom: 0;
 }
 
 .mobile-menu-links a {
-  padding: 15px 0;
+  display: block;
+
+  padding: 16px 0;
 
   color: var(--soft-white);
 
   font-family: var(--serif);
-  font-size: clamp(2.25rem, 10vw, 3.5rem);
+  font-size: clamp(2rem, 10vw, 3.2rem);
   font-weight: 400;
-  line-height: 1.08;
+  line-height: 1.02;
   letter-spacing: -0.035em;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
@@ -1204,7 +1247,8 @@ a {
   display: inline-flex;
   align-self: flex-start;
 
-  margin-bottom: 30px;
+  margin-top: 34px;
+  margin-bottom: 24px;
   padding-bottom: 6px;
 
   border-bottom: 1px solid rgba(183, 255, 84, 0.55);
@@ -1216,15 +1260,17 @@ a {
 }
 
 .mobile-menu-signature {
-  margin: 0;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 
   color: rgba(245, 247, 243, 0.42);
 
   font-size: 0.72rem;
   letter-spacing: 0.05em;
 }
-
-/* MOBILE NAV — FINAL OVERRIDE */
 
 @media (max-width: 800px) {
   .nav-links,
@@ -1235,67 +1281,1083 @@ a {
   .mobile-menu-button {
     display: flex !important;
     position: relative;
-    z-index: 100;
+    z-index: 110;
     margin-left: auto;
+  }
+
+  .site-header:has(.mobile-menu.is-open) {
+    background: transparent;
+    border-bottom-color: transparent;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .site-header:has(.mobile-menu.is-open) .brand {
+    visibility: hidden;
+  }
+
+  .site-header:has(.mobile-menu.is-open) .menu-symbol span {
+    background: var(--household-green);
   }
 }
 
-.menu-symbol {
-  width: 24px;
-  height: 18px;
+/* MOBILE HERO POLISH */
 
+@media (max-width: 800px) {
+  .hero {
+    min-height: 86vh;
+    padding: 122px 0 72px;
+    align-items: flex-start;
+  }
+
+  .hero-inner {
+    padding-top: 6vh;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    margin-top: 18px;
+    margin-bottom: 22px;
+
+    font-size: clamp(2.65rem, 12vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+  }
+
+  .hero-copy {
+    max-width: 92%;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .hero-signature {
+    margin-top: 22px;
+    font-size: 0.82rem;
+  }
+
+  .hero-link {
+    margin-top: 34px;
+  }
+
+  .life {
+    padding-top: 78px;
+  }
+
+  .life-heading {
+    margin-bottom: 38px;
+  }
+
+  .life h2 {
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
+  }
+
+  .family-image img {
+    height: 68vh;
+    min-height: 500px;
+    max-height: 690px;
+
+    object-fit: cover;
+    object-position: 58% center;
+  }
+}
+
+/* PRODUCT EXPERIENCE */
+
+.product-experience {
+  padding: 145px 0 130px;
+  background: #f4f2eb;
+  color: #10231d;
+  overflow: hidden;
+}
+
+.product-experience-inner {
+  width: min(100% - 64px, 1120px);
+  margin: 0 auto;
+}
+
+.product-intro {
+  max-width: 760px;
+}
+
+.product-intro h2 {
+  margin: 20px 0 28px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 5vw, 5.3rem);
+  line-height: 0.98;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+
+.product-intro h2 em {
+  font-weight: 400;
+}
+
+.product-intro > p:last-child {
+  max-width: 610px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.76;
+}
+
+.product-devices {
+  width: min(100%, 1040px);
+  margin: 75px auto 55px;
+}
+
+.product-devices img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-note {
+  margin: 0 auto;
+  text-align: center;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.product-note em {
+  font-weight: 400;
+}
+
+/* =========================================================
+   HOUSEHOLD — LATEST LANDING PAGE OVERRIDES
+   ========================================================= */
+
+/* HERO CORE PROMISE */
+
+.hero-promise {
+  max-width: 590px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.hero-promise strong {
+  display: block;
+  color: var(--household-green);
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.hero-promise p {
+  max-width: 540px;
+  margin: 12px 0 0;
+  color: rgba(245, 247, 243, 0.58);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* WHERE IT STARTED */
+
+.story-realization {
+  margin: 44px 0;
+  padding: 30px 0;
+  border-top: 1px solid var(--line-light);
+  border-bottom: 1px solid var(--line-light);
+}
+
+.story-realization > p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.story-realization blockquote {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.story-realization blockquote em {
+  color: #578a24;
+  font-weight: 400;
+}
+
+/* PREMIUM PRODUCT DEVICES — REFINED */
+
+.product-devices-premium {
+  position: relative;
+  width: min(100%, 1000px);
+  margin: 85px auto 70px;
+  padding: 0 70px 72px 0;
+}
+
+.device-laptop {
+  position: relative;
+  width: 82%;
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.device-laptop-screen {
+  position: relative;
+  padding: 7px;
+  background: #151918;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px 14px 7px 7px;
+  box-shadow:
+    0 26px 60px rgba(21, 30, 24, 0.15),
+    0 7px 18px rgba(21, 30, 24, 0.08);
+}
+
+.device-laptop-screen::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.device-laptop-screen img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+}
+
+.device-laptop-base {
+  position: relative;
+  width: 104%;
+  height: 10px;
+  margin-left: -2%;
+  background: linear-gradient(
+    180deg,
+    #d6d7d3 0%,
+    #aeb0ad 58%,
+    #858885 100%
+  );
+  border-radius: 1px 1px 10px 10px;
+  box-shadow: 0 9px 14px rgba(0, 0, 0, 0.1);
+}
+
+.device-laptop-base::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: -3px;
+  height: 3px;
+  background: #8e918e;
+  border-radius: 0 0 50% 50%;
+}
+
+.device-laptop-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 70px;
+  height: 3px;
+  transform: translateX(-50%);
+  background: #929492;
+  border-radius: 0 0 6px 6px;
+}
+
+.device-phone {
+  position: absolute;
+  width: 18%;
+  min-width: 138px;
+  max-width: 168px;
+  right: 6%;
+  bottom: 0;
+  padding: 5px;
+  background: #121514;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 27px;
+  box-shadow:
+    0 23px 48px rgba(18, 27, 22, 0.2),
+    0 7px 17px rgba(18, 27, 22, 0.1);
+  transform: rotate(1deg);
+}
+
+.device-phone-screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 19.5;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #06110d;
+}
+
+.device-phone-screen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.device-phone-speaker {
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  left: 50%;
+  width: 34px;
+  height: 4px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* MEMBERSHIP */
+
+.membership {
+  padding: 145px 0;
+  background: #faf8f3;
+  border-top: 1px solid var(--line-light);
+}
+
+.membership-inner {
+  width: min(1120px, calc(100% - 56px));
+  margin: auto;
+}
+
+.membership-intro {
+  max-width: 760px;
+}
+
+.membership-intro h2 {
+  margin: 20px 0 28px;
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 4.5vw, 4.6rem);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.membership-intro h2 em {
+  color: #578a24;
+  font-weight: 400;
+}
+
+.membership-intro > p:last-child {
+  max-width: 540px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.7;
+}
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 75px;
+}
+
+.membership-card {
+  min-height: 560px;
+  padding: 34px;
   display: flex;
   flex-direction: column;
+  background: var(--paper);
+  border: 1px solid var(--line-light);
+}
+
+.membership-featured {
+  position: relative;
+  border-top: 3px solid var(--household-green);
+  background: #f1f0e8;
+}
+
+.membership-card-top {
+  min-height: 205px;
+}
+
+.membership-heading-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.membership-label,
+.membership-recommended {
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+}
+
+.membership-label {
+  color: #526054;
+}
+
+.membership-recommended {
+  color: #578a24;
+  text-align: right;
+}
+
+.membership-price {
+  margin-top: 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.price {
+  font-family: var(--serif);
+  font-size: 3.3rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.price-period {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.membership-description {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.membership-features {
+  margin: 30px 0 38px;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-light);
+}
+
+.membership-features li {
+  padding: 13px 0;
+  color: #485049;
+  font-size: 0.84rem;
+  line-height: 1.4;
+  border-bottom: 1px solid var(--line-light);
+}
+
+.membership-features li::before {
+  content: "—";
+  margin-right: 9px;
+  color: #6b9e32;
+}
+
+.membership-button {
+  margin-top: auto;
+  min-height: 46px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
-  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 650;
 }
 
-.menu-symbol span {
-  display: block;
-  height: 1px;
-  background: var(--household-green);
-  border-radius: 999px;
+.membership-button.secondary {
+  border: 1px solid #a9afa7;
+  color: var(--ink);
 }
 
-.menu-symbol span:first-child {
-  width: 24px;
+.membership-button.primary {
+  background: var(--deep-green);
+  color: var(--household-green);
 }
 
-.menu-symbol span:last-child {
-  width: 16px;
+.membership-footnote {
+  margin: 35px 0 0;
+  color: #7b817b;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* MEMBERSHIP — PRICING PRINCIPLE */
+
+.membership-principle {
+  max-width: 820px;
+  margin: 70px auto 0;
+  padding: 48px 52px;
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid var(--line-light);
+}
+
+.membership-principle-eyebrow {
+  margin: 0 0 18px;
+  color: #578a24;
+  font-size: 0.66rem;
+  font-weight: 650;
+  letter-spacing: 0.13em;
+}
+
+.membership-principle h3 {
+  max-width: 660px;
+  margin: 0 auto 22px;
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.membership-principle > p:not(.membership-principle-eyebrow):not(.membership-principle-closing) {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.membership-principle-points {
+  margin: 30px 0 24px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+
+.membership-principle-points span {
+  color: #485049;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.membership-principle-closing {
+  margin: 0;
+  color: #578a24;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-style: italic;
 }
 
 @media (max-width: 800px) {
-  .mobile-menu-inner {
-    padding-top: 24px;
-    padding-bottom: 30px;
-  }
-
-  .mobile-menu-brand {
-    padding-right: 56px;
-  }
-
-  .mobile-menu-links {
-    margin-top: 18vh;
-    margin-bottom: auto;
-  }
-
-  .mobile-menu-links a {
-    padding: 18px 0;
-    font-size: clamp(2.2rem, 11vw, 3.4rem);
-  }
-
-  .mobile-enter {
+  .membership-principle {
     margin-top: 42px;
-    margin-bottom: 18px;
+    padding: 34px 24px;
   }
 
-  .mobile-menu-signature {
-    padding-top: 16px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  .membership-principle-points {
+    flex-direction: column;
+    gap: 8px;
   }
 }
+
+/* FINAL MOBILE REFINEMENTS */
+
+@media (max-width: 800px) {
+  .hero-promise {
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+
+  .hero-promise p {
+    font-size: 0.86rem;
+  }
+
+  .story-realization {
+    margin: 34px 0;
+    padding: 24px 0;
+  }
+
+  .product-devices-premium {
+    width: 100%;
+    max-width: 520px;
+    margin: 55px auto 70px;
+    padding: 0 28px 120px 0;
+    position: relative;
+  }
+
+  .device-laptop {
+    width: 88%;
+    max-width: none;
+  }
+
+  .device-laptop-screen {
+    padding: 4px;
+    border-radius: 8px 8px 4px 4px;
+  }
+
+  .device-laptop-screen img {
+    border-radius: 4px;
+  }
+
+  .device-laptop-base {
+    height: 7px;
+  }
+
+  .device-laptop-notch {
+    width: 42px;
+    height: 2px;
+  }
+
+  .device-phone {
+    width: 23%;
+    min-width: 82px;
+    max-width: 105px;
+    right: 2%;
+    bottom: 18px;
+    padding: 3px;
+    border-radius: 18px;
+    transform: rotate(1deg);
+  }
+
+  .device-phone-screen {
+    aspect-ratio: 9 / 19.5;
+    border-radius: 15px;
+  }
+
+  .device-phone-speaker {
+    top: 6px;
+    width: 21px;
+    height: 2px;
+  }
+
+  .product-note {
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+  }
+
+  .membership {
+    padding: 95px 0;
+  }
+
+  .membership-inner {
+    width: min(100% - 34px, 1120px);
+  }
+
+  .membership-intro h2 {
+    font-size: clamp(2.35rem, 10vw, 3.35rem);
+  }
+
+  .membership-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 52px;
+  }
+
+  .membership-card {
+    min-height: auto;
+    padding: 28px 24px;
+  }
+
+  .membership-card-top {
+    min-height: auto;
+  }
+
+  .membership-price {
+    margin-top: 24px;
+  }
+
+  .price {
+    font-size: 3rem;
+  }
+
+  .membership-description {
+    max-width: 420px;
+  }
+
+  .membership-features {
+    margin: 28px 0 32px;
+  }
+
+  .membership-button {
+    width: 100%;
+  }
+
+  .membership-footnote {
+    margin-top: 28px;
+    padding: 0 12px;
+    line-height: 1.5;
+  }
+}
+
+/* MOBILE FULL-WIDTH CORRECTION — FINAL */
+
+@media (max-width: 800px) {
+  html,
+  body,
+  #root,
+  main {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .hero,
+  .life,
+  .story,
+  .understanding,
+  .prepared,
+  .network,
+  .product-experience,
+  .membership,
+  .presence,
+  .trust-section,
+  .enter,
+  .site-footer {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nav-inner,
+  .hero-inner,
+  .life-heading,
+  .story-inner,
+  .understanding-inner,
+  .prepared-intro,
+  .companion,
+  .prepared-principle,
+  .network-inner,
+  .product-experience-inner,
+  .membership-inner,
+  .presence-inner,
+  .trust-inner,
+  .enter-inner,
+  .footer-inner {
+    width: calc(100% - 34px);
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Estate Planning Companion — origin story */
+
+.estate-companion .companion-content {
+  max-width: 760px;
+}
+
+.estate-origin-lead {
+  font-size: clamp(1.08rem, 1.6vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.estate-origin-answer {
+  margin-top: 2rem;
+  font-weight: 600;
+  font-size: clamp(1.1rem, 1.7vw, 1.35rem);
+}
+
+.estate-boundary {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.estate-boundary p {
+  margin: 0;
+  opacity: 0.78;
+}
+
+.estate-principle {
+  margin-top: 2rem;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.45;
+}
+
+@media (max-width: 720px) {
+  .estate-companion .companion-content {
+    max-width: 100%;
+  }
+
+  .estate-origin-lead,
+  .estate-origin-answer,
+  .estate-principle {
+    font-size: inherit;
+  }
+
+  .estate-boundary {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+}
+
+/* =========================================================
+   SOCIAL UNIT — LIGHTER HUMAN-CENTERED VISUAL PASS
+   ========================================================= */
+
+:root {
+  --deep-green: #0b1a13;
+  --deep-green-soft: #10241a;
+  --paper: #f7f4ed;
+  --paper-soft: #eeeae1;
+  --ink: #18211c;
+  --muted: #66706a;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(247, 244, 237, 0.94);
+  color: var(--ink);
+  border-bottom: 1px solid rgba(24, 33, 28, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.brand-name,
+.sign-in {
+  color: var(--deep-green);
+}
+
+.nav-links {
+  color: rgba(24, 33, 28, 0.64);
+}
+
+.nav-links a:hover,
+.sign-in:hover {
+  color: var(--deep-green);
+}
+
+.menu-symbol span {
+  background: var(--deep-green);
+}
+
+.hero {
+  min-height: calc(90vh - 84px);
+  padding: 110px 0 105px;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 80% 28%, rgba(183, 255, 84, 0.13), transparent 24%),
+    linear-gradient(180deg, #fcfbf7 0%, var(--paper) 100%);
+}
+
+.hero h1 {
+  color: var(--deep-green);
+}
+
+.hero h1 em {
+  color: #4f7f25;
+}
+
+.hero-copy {
+  color: var(--muted);
+}
+
+.hero-signature {
+  color: var(--deep-green);
+}
+
+.hero-promise {
+  border-top: 1px solid rgba(24, 33, 28, 0.12);
+}
+
+.hero-promise strong {
+  color: #4f7f25;
+}
+
+.hero-promise p {
+  color: var(--muted);
+}
+
+.hero-link {
+  color: #4f7f25;
+  border-bottom-color: rgba(79, 127, 37, 0.42);
+}
+
+.life {
+  background: #fcfbf7;
+}
+
+.family-image {
+  width: min(1380px, calc(100% - 36px));
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow: 0 18px 50px rgba(22, 35, 28, 0.06);
+}
+
+.story,
+.trust-section,
+.membership {
+  background: #fcfbf7;
+}
+
+.understanding,
+.network,
+.product-experience {
+  background: var(--paper);
+}
+
+.understanding-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 90px;
+  border-top: 0;
+}
+
+.understanding-item {
+  display: block;
+  min-height: 280px;
+  padding: 30px;
+  background: #fcfbf7;
+  border: 1px solid rgba(24, 33, 28, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 12px 34px rgba(22, 35, 28, 0.035);
+}
+
+.understanding-item span {
+  display: block;
+  margin-bottom: 58px;
+}
+
+.understanding-item h3 {
+  margin-bottom: 16px;
+  color: var(--deep-green);
+}
+
+.prepared,
+.presence,
+.enter {
+  width: min(1380px, calc(100% - 36px));
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 32px;
+}
+
+.prepared {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  background:
+    radial-gradient(circle at 82% 15%, rgba(183, 255, 84, 0.07), transparent 25%),
+    var(--deep-green);
+  overflow: hidden;
+}
+
+.network-copy {
+  padding: 34px 40px 38px;
+  background: #fcfbf7;
+  border: 1px solid rgba(24, 33, 28, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 12px 34px rgba(22, 35, 28, 0.035);
+}
+
+.network-statement {
+  margin-top: 38px !important;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-light);
+  font-family: var(--serif);
+  font-size: 1.35rem !important;
+  font-weight: 400 !important;
+  color: var(--deep-green) !important;
+}
+
+.membership-card {
+  background: var(--paper);
+  border-radius: 22px;
+}
+
+.membership-featured {
+  background: #eef0e6;
+}
+
+.trust-point {
+  padding: 24px 26px;
+  margin-bottom: 12px;
+  background: var(--paper);
+  border: 1px solid rgba(24, 33, 28, 0.07);
+  border-radius: 18px;
+}
+
+.trust-points {
+  border-top: 0;
+}
+
+.trust-point {
+  border-bottom: 1px solid rgba(24, 33, 28, 0.07);
+}
+
+.presence {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.enter {
+  margin-top: 18px;
+  border-radius: 32px 32px 0 0;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: auto;
+    padding: 92px 0 84px;
+  }
+
+  .family-image {
+    width: calc(100% - 20px);
+    border-radius: 22px;
+  }
+
+  .understanding-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 62px;
+  }
+
+  .understanding-item {
+    min-height: 0;
+    padding: 26px;
+  }
+
+  .understanding-item span {
+    margin-bottom: 34px;
+  }
+
+  .understanding-item p {
+    grid-column: auto;
+  }
+
+  .prepared,
+  .presence,
+  .enter {
+    width: calc(100% - 20px);
+    max-width: none;
+  }
+
+  .network-copy {
+    padding: 28px;
+  }
+}
+
+/* =========================================================
+   BRAND EYEBROW REFINEMENT — LIGHT SURFACES
+   ========================================================= */
+
+/*
+  Lime green is reserved for dark Household surfaces.
+  On ivory/light surfaces, eyebrow labels use deep green so the
+  hierarchy feels quieter, more editorial, and more on-brand.
+*/
+
+.hero .eyebrow,
+.life .eyebrow,
+.story .eyebrow,
+.understanding .eyebrow,
+.network .eyebrow,
+.product-experience .eyebrow,
+.membership .eyebrow,
+.trust-section .eyebrow {
+  color: var(--deep-green);
+}
+
+/* Keep the accent green where it has enough contrast to feel intentional. */
+.prepared .eyebrow,
+.presence .eyebrow,
+.enter .eyebrow {
+  color: var(--household-green);
+}
+
 
 /* MOBILE HERO POLISH */
 

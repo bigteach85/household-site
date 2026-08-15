@@ -474,6 +474,72 @@ function App() {
         </div>
       </section>
 
+<section className="bring-it">
+  <div className="bring-it-inner">
+    <div className="bring-it-copy">
+      <p className="eyebrow dark-eyebrow">DON’T START OVER</p>
+
+      <h2>
+        Ditch the spreadsheets.
+        <br />
+        <em>Keep the information.</em>
+      </h2>
+
+      <p className="bring-it-lead">
+        You shouldn’t have to rebuild your household from scratch.
+        Bring the spreadsheets, documents, and cloud files you already use.
+        Household can help turn what you already have into a clearer Household Picture.
+      </p>
+
+      <p className="bring-it-principle">
+        Household should never require a household to recreate information it already has.
+      </p>
+
+      <a className="bring-it-button" href="#membership">
+        Try Household free
+      </a>
+    </div>
+
+    <div className="bring-it-paths">
+      <article>
+        <span>01</span>
+        <div>
+          <strong>Upload a spreadsheet</strong>
+          <p>
+            Bring the budget, bill tracker, debt sheet, or family spreadsheet
+            you already use.
+          </p>
+          <small>Planned import</small>
+        </div>
+      </article>
+
+      <article>
+        <span>02</span>
+        <div>
+          <strong>Connect cloud storage</strong>
+          <p>
+            Keep important files where they already live while Household helps
+            give them meaning.
+          </p>
+          <small>Planned integration</small>
+        </div>
+      </article>
+
+      <article>
+        <span>03</span>
+        <div>
+          <strong>Start fresh</strong>
+          <p>
+            Nothing to bring? Build your Household gradually, one useful piece
+            at a time.
+          </p>
+          <small>Available with Household</small>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
       <section className="membership" id="membership">
   <div className="membership-inner">
     <div className="membership-intro">

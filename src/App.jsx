@@ -227,13 +227,6 @@ function App() {
             </p>
           </div>
 
-          <figure className="household-illustration household-illustration--documents" aria-hidden="true">
-            <img
-              src="/images/illustrations/household-documents.png"
-              alt=""
-            />
-          </figure>
-
           <div className="understanding-list">
             <div className="understanding-item">
               <span>01</span>
@@ -282,7 +275,16 @@ function App() {
         </div>
 
         <div className="companion">
-          <div className="companion-number">01</div>
+          <div className="companion-aside">
+            <div className="companion-number">01</div>
+
+            <figure className="household-illustration household-illustration--inverse household-illustration--recovery" aria-hidden="true">
+              <img
+                src="/images/illustrations/household-care-inverse.png"
+                alt=""
+              />
+            </figure>
+          </div>
 
           <div className="companion-content">
             <p className="companion-label">RECOVERY COMPANION</p>
@@ -305,7 +307,16 @@ function App() {
         </div>
 
         <div className="companion estate-companion">
-  <div className="companion-number">02</div>
+  <div className="companion-aside">
+    <div className="companion-number">02</div>
+
+    <figure className="household-illustration household-illustration--inverse household-illustration--estate" aria-hidden="true">
+      <img
+        src="/images/illustrations/household-documents-inverse.png"
+        alt=""
+      />
+    </figure>
+  </div>
 
   <div className="companion-content">
     <p className="companion-label">ESTATE PLANNING COMPANION</p>
@@ -380,9 +391,9 @@ function App() {
               <em>seats.</em>
             </h2>
 
-            <figure className="household-illustration household-illustration--access" aria-hidden="true">
+            <figure className="household-illustration household-illustration--companionship" aria-hidden="true">
               <img
-                src="/images/illustrations/household-trusted-access.png"
+                src="/images/illustrations/household-companionship.png"
                 alt=""
               />
             </figure>
@@ -616,6 +627,13 @@ function App() {
           <p>
             It wants to give some back.
           </p>
+
+          <figure className="household-illustration household-illustration--inverse household-illustration--laundry" aria-hidden="true">
+            <img
+              src="/images/illustrations/household-laundry-inverse.png"
+              alt=""
+            />
+          </figure>
 
           <div className="presence-rule"></div>
 

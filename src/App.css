@@ -19,8 +19,8 @@
 }
 
 /* HOUSEHOLD ILLUSTRATION SYSTEM
-   Quiet object studies in a single dark-green contour. Photography carries
-   human presence; illustration carries the evidence of care. */
+   Quiet object studies in a single contour. Dark green is used on light
+   surfaces; soft white is the approved inverse treatment on dark surfaces. */
 
 .household-illustration {
   margin: 0;
@@ -39,14 +39,30 @@
   margin-top: 54px;
 }
 
-.household-illustration--documents {
-  width: min(100%, 290px);
-  margin: 64px 4% 0 auto;
+.household-illustration--inverse {
+  opacity: 0.76;
 }
 
-.household-illustration--access {
-  width: min(100%, 245px);
-  margin-top: 58px;
+.companion-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.household-illustration--recovery,
+.household-illustration--estate {
+  width: min(100%, 210px);
+  margin-top: 54px;
+}
+
+.household-illustration--companionship {
+  width: min(100%, 255px);
+  margin-top: 54px;
+}
+
+.household-illustration--laundry {
+  width: min(100%, 255px);
+  margin: 48px auto 0;
 }
 
 @media (max-width: 800px) {
@@ -55,20 +71,26 @@
     margin-top: 38px;
   }
 
-  .household-illustration--documents {
-    width: min(70vw, 245px);
-    margin-top: 42px;
+  .companion-aside {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
-  .household-illustration--access {
-    width: min(62vw, 215px);
-    margin-top: 36px;
+  .household-illustration--recovery,
+  .household-illustration--estate {
+    width: min(52vw, 185px);
+    margin-top: 0;
   }
 
-  .household-illustration--care {
-    position: static;
-    width: min(62vw, 210px);
-    margin: 28px 0 40px;
+  .household-illustration--companionship {
+    width: min(68vw, 225px);
+    margin-top: 38px;
+  }
+
+  .household-illustration--laundry {
+    width: min(70vw, 225px);
+    margin-top: 40px;
   }
 }
 

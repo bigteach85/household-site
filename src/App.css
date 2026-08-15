@@ -49,6 +49,18 @@
   margin-top: 58px;
 }
 
+.membership-principle {
+  position: relative;
+}
+
+.household-illustration--care {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  width: min(24%, 225px);
+  opacity: 0.9;
+}
+
 @media (max-width: 800px) {
   .household-illustration--coordination {
     width: min(78vw, 270px);

@@ -581,6 +581,13 @@ function App() {
     <div className="membership-principle">
       <p className="membership-principle-eyebrow">PEOPLE AREN'T SEATS.</p>
 
+      <figure className="household-illustration household-illustration--care" aria-hidden="true">
+        <img
+          src="/images/illustrations/household-care.png"
+          alt=""
+        />
+      </figure>
+
       <h3>We don't charge you more because more people matter to you.</h3>
 
       <p>

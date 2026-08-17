@@ -113,8 +113,9 @@ function App() {
             </h1>
 
             <p className="hero-copy">
-              One private place to understand and coordinate the important
-              parts of life you share—for a calmer home.
+              Household is where the people who depend on one another
+              understand what they share, what needs attention, and who is
+              responsible.
             </p>
 
             <div className="hero-promise">
@@ -142,15 +143,31 @@ function App() {
 
       <section className="life" id="life">
         <div className="life-heading">
-          <p className="eyebrow dark-eyebrow">WHAT IT'S FOR</p>
+          <p className="eyebrow dark-eyebrow">ONE SHARED UNDERSTANDING</p>
 
           <h2>
-            Relationships come first.
+            Family life is shared.
             <br />
-            <em>Information follows.</em>
+            <em>The understanding should be, too.</em>
           </h2>
         </div>
-
+        <div className="household-promise-grid">
+          <article>
+            <span>01</span>
+            <h3>What you share</h3>
+            <p>People, accounts, documents, plans, care, and the ordinary things your household depends on.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>What needs attention</h3>
+            <p>See the few things that matter now without searching across apps, inboxes, and spreadsheets.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Who is responsible</h3>
+            <p>Make it clear who is handling something, who it affects, and what needs to happen next.</p>
+          </article>
+        </div>
       </section>
 
       <section className="story" id="story">
@@ -539,6 +556,37 @@ function App() {
     </div>
   </div>
 </section>
+
+      <section className="founding-100" id="founding-100">
+        <div className="founding-100-inner">
+          <div className="founding-100-mark" aria-hidden="true">
+            <span>100</span>
+          </div>
+          <div className="founding-100-copy">
+            <p className="eyebrow">THE FOUNDING 100 HOUSEHOLDS</p>
+            <h2>
+              Help shape Household
+              <br />
+              <em>from the beginning.</em>
+            </h2>
+            <p>
+              Household is in pre-production development. We are inviting the
+              first 100 households to use it in real family life, tell us what
+              earns trust, and help shape what comes next.
+            </p>
+            <p className="founding-100-reward">
+              Founding households receive full Care &amp; Prepare access for life,
+              at no cost, plus a unique founding leaf on their household.
+            </p>
+            <a className="founding-100-button" href="#">Join the Founding 100</a>
+          </div>
+          <aside className="founding-100-aside">
+            <strong>Our next chapter</strong>
+            <p>100 founding households first. Then 1,000 households living with greater clarity over the next year.</p>
+            <small>No polished promises. Real households helping us build this carefully.</small>
+          </aside>
+        </div>
+      </section>
 
       <section className="membership" id="membership">
   <div className="membership-inner">

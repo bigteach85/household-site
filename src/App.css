@@ -18,6 +18,46 @@
   --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+/* =========================================================
+   CANONICAL HOUSEHOLD POSITIONING + FOUNDING 100
+   ========================================================= */
+.household-promise-grid {
+  width: min(1120px, calc(100% - 56px));
+  margin: 54px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(23, 79, 67, .2);
+  border-bottom: 1px solid rgba(23, 79, 67, .2);
+}
+.household-promise-grid article { padding: 34px 32px 38px; border-left: 1px solid rgba(23, 79, 67, .16); }
+.household-promise-grid article:first-child { border-left: 0; }
+.household-promise-grid span { color: #174f43; font-size: .7rem; font-weight: 800; letter-spacing: .14em; }
+.household-promise-grid h3 { margin: 18px 0 10px; color: #123b33; font-family: Georgia, serif; font-size: clamp(1.45rem, 2.2vw, 2rem); font-weight: 400; }
+.household-promise-grid p { margin: 0; color: #52635d; line-height: 1.7; }
+.founding-100 { padding: clamp(88px, 10vw, 150px) 0; background: #123b33; color: #f7f5ee; }
+.founding-100-inner { width: min(1120px, calc(100% - 56px)); margin: 0 auto; display: grid; grid-template-columns: 150px minmax(0, 1fr) 280px; gap: clamp(34px, 6vw, 80px); align-items: center; }
+.founding-100-mark { width: 140px; height: 140px; display: grid; place-items: center; border: 1px solid rgba(183,255,84,.38); border-radius: 50% 50% 46% 54% / 58% 45% 55% 42%; color: #b7ff54; transform: rotate(-5deg); }
+.founding-100-mark span { font-family: Georgia, serif; font-size: 2.8rem; transform: rotate(5deg); }
+.founding-100 .eyebrow { color: #b7ff54; }
+.founding-100 h2 { margin: 16px 0 24px; font-size: clamp(2.4rem, 5vw, 4.7rem); line-height: .98; letter-spacing: -.055em; }
+.founding-100 h2 em { color: #dce7df; font-family: Georgia, serif; font-weight: 400; }
+.founding-100-copy > p { max-width: 660px; color: #c9d6cf; line-height: 1.75; }
+.founding-100-copy .founding-100-reward { color: #f7f5ee; font-weight: 700; }
+.founding-100-button { display: inline-flex; margin-top: 18px; padding: 14px 20px; border-radius: 999px; background: #b7ff54; color: #123b33; font-weight: 800; text-decoration: none; }
+.founding-100-aside { padding: 28px 0 28px 28px; border-left: 1px solid rgba(255,255,255,.16); }
+.founding-100-aside strong { display: block; margin-bottom: 12px; font-family: Georgia, serif; font-size: 1.5rem; font-weight: 400; }
+.founding-100-aside p { color: #e3ebe6; line-height: 1.6; }
+.founding-100-aside small { display: block; color: #97aaa0; line-height: 1.6; }
+@media (max-width: 850px) {
+  .household-promise-grid { grid-template-columns: 1fr; width: calc(100% - 34px); }
+  .household-promise-grid article { border-left: 0; border-top: 1px solid rgba(23,79,67,.16); }
+  .household-promise-grid article:first-child { border-top: 0; }
+  .founding-100-inner { width: calc(100% - 34px); grid-template-columns: 1fr; }
+  .founding-100-mark { width: 92px; height: 92px; }
+  .founding-100-mark span { font-size: 2rem; }
+  .founding-100-aside { padding: 24px 0 0; border-top: 1px solid rgba(255,255,255,.16); border-left: 0; }
+}
+
 /* HOUSEHOLD ILLUSTRATION SYSTEM
    Quiet object studies in a single contour. Dark green is used on light
    surfaces; soft white is the approved inverse treatment on dark surfaces. */

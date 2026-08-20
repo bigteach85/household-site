@@ -1,0 +1,143 @@
+.community-counter-mount {
+  background: #f4f1e8;
+}
+
+.community-counter {
+  background: #f4f1e8;
+  border-bottom: 1px solid rgba(20, 64, 48, 0.14);
+}
+
+.community-counter-inner {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 48px 0 52px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  gap: 72px;
+  align-items: end;
+}
+
+.community-counter-eyebrow {
+  margin: 0 0 14px;
+  color: #163f31;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.community-counter-copy h2 {
+  margin: 0;
+  color: #163f31;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 14px 20px;
+}
+
+.community-counter-copy h2 strong {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4.5rem, 9vw, 8.4rem);
+  line-height: 0.82;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+
+.community-counter-copy h2 span {
+  max-width: 330px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.45rem);
+  line-height: 1.02;
+  font-weight: 400;
+}
+
+.community-counter-copy > p:last-child {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: rgba(22, 63, 49, 0.76);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.community-counter-progress {
+  padding: 24px 0 2px;
+  border-top: 1px solid rgba(22, 63, 49, 0.25);
+}
+
+.community-counter-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: baseline;
+  color: #163f31;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.community-counter-progress-labels span {
+  color: rgba(22, 63, 49, 0.68);
+}
+
+.community-counter-progress-labels strong {
+  font-weight: 700;
+}
+
+.community-counter-track {
+  height: 3px;
+  margin: 15px 0 20px;
+  background: rgba(22, 63, 49, 0.14);
+  overflow: hidden;
+}
+
+.community-counter-track span {
+  display: block;
+  min-width: 3px;
+  height: 100%;
+  background: #b7ff54;
+  transition: width 500ms ease;
+}
+
+.community-counter-progress a {
+  color: #163f31;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.community-counter-progress a:hover span {
+  transform: translateX(3px);
+}
+
+.community-counter-progress a span {
+  transition: transform 160ms ease;
+}
+
+@media (max-width: 800px) {
+  .community-counter-inner {
+    width: min(100% - 32px, 680px);
+    padding: 36px 0 40px;
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .community-counter-copy h2 {
+    display: block;
+  }
+
+  .community-counter-copy h2 strong {
+    display: block;
+    margin-bottom: 14px;
+    font-size: clamp(4.4rem, 22vw, 7rem);
+  }
+
+  .community-counter-copy h2 span {
+    display: block;
+    max-width: 100%;
+  }
+
+  .community-counter-copy > p:last-child {
+    margin-top: 18px;
+  }
+}

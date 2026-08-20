@@ -207,18 +207,10 @@ a {
 .household-wordmark-mark {
   width: 36px;
   height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   flex: 0 0 auto;
-  color: #b7ff54;
-  background: #0b1a13;
-  border-radius: 10px;
-  font-family: var(--sans);
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1;
+  object-fit: contain;
+  border-radius: 9px;
 }
 
 .household-wordmark-name {
@@ -240,11 +232,6 @@ a {
 
 .household-wordmark.is-inverse {
   color: var(--soft-white, #f5f7f3);
-}
-
-.household-wordmark.is-inverse .household-wordmark-mark {
-  color: #0b1a13;
-  background: #b7ff54;
 }
 
 .nav-links {

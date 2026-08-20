@@ -4,7 +4,12 @@ import "./App.css";
 function HouseholdWordmark({ inverse = false, className = "" }) {
   return (
     <span className={`household-wordmark ${inverse ? "is-inverse" : ""} ${className}`.trim()}>
-      <span className="household-wordmark-mark" aria-hidden="true">h</span>
+      <img
+        className="household-wordmark-mark"
+        src="/images/household-logo.png"
+        alt=""
+        aria-hidden="true"
+      />
       <span className="household-wordmark-name">household<sup>™</sup></span>
     </span>
   );

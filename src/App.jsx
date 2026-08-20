@@ -968,6 +968,7 @@ function App() {
 
           <div className="footer-meta">
             <span>© 2026 Household</span>
+            <a href="https://thepierpointgroup.com/" target="_blank" rel="noreferrer">A Pierpoint Group LLC product</a>
             <span>Built for real family life.</span>
           </div>
         </div>

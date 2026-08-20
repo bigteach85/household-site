@@ -1137,6 +1137,10 @@ a {
   color: var(--soft-white);
 }
 
+.footer-meta a:hover {
+  color: var(--soft-white);
+}
+
 .footer-meta {
   grid-column: 1 / -1;
 

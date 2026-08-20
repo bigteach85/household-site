@@ -1,6 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 
+function HouseholdWordmark({ inverse = false, className = "" }) {
+  return (
+    <span className={`household-wordmark ${inverse ? "is-inverse" : ""} ${className}`.trim()}>
+      <span className="household-wordmark-mark" aria-hidden="true">h</span>
+      <span className="household-wordmark-name">household<sup>™</sup></span>
+    </span>
+  );
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -8,13 +17,8 @@ function App() {
     <main>
       <header className="site-header">
   <div className="nav-inner">
-    <a className="brand" href="/" aria-label="Our Household home">
-      <img
-        className="brand-logo"
-        src="/images/household-logo.png"
-        alt=""
-      />
-      <span className="brand-name">our household™</span>
+    <a className="brand" href="/" aria-label="household home">
+      <HouseholdWordmark />
     </a>
 
 <nav className="nav-links">
@@ -49,11 +53,7 @@ function App() {
   <div className={`mobile-menu ${menuOpen ? "is-open" : ""}`}>
     <div className="mobile-menu-inner">
       <div className="mobile-menu-brand">
-        <img
-          src="/images/household-logo.png"
-          alt=""
-        />
-        <span>our household™</span>
+        <HouseholdWordmark inverse />
       </div>
 
       <nav className="mobile-menu-links">
@@ -915,13 +915,7 @@ function App() {
 
       <section className="enter">
         <div className="enter-inner">
-          <img
-            className="enter-logo"
-            src="/images/household-logo.png"
-            alt=""
-          />
-
-          <p className="eyebrow">OUR HOUSEHOLD™</p>
+          <HouseholdWordmark inverse className="enter-wordmark" />
 
           <h2>
             A calmer home starts
@@ -947,14 +941,8 @@ function App() {
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-brand">
-            <img
-              className="footer-logo"
-              src="/images/household-logo.png"
-              alt=""
-            />
-
             <div>
-              <div className="footer-name">our household™</div>
+              <HouseholdWordmark inverse />
               <div className="footer-tagline">
                 The people who depend on one another. For a calmer home.
               </div>

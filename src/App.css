@@ -197,6 +197,55 @@ a {
   letter-spacing: -0.01em;
 }
 
+.household-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--deep-green, #0b1a13);
+}
+
+.household-wordmark-mark {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: #b7ff54;
+  background: #0b1a13;
+  border-radius: 10px;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.household-wordmark-name {
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.household-wordmark-name sup {
+  position: relative;
+  top: -0.45em;
+  margin-left: 2px;
+  font-family: var(--sans);
+  font-size: 0.38em;
+  letter-spacing: 0;
+}
+
+.household-wordmark.is-inverse {
+  color: var(--soft-white, #f5f7f3);
+}
+
+.household-wordmark.is-inverse .household-wordmark-mark {
+  color: #0b1a13;
+  background: #b7ff54;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -3941,5 +3990,71 @@ a {
   .bring-it-paths article {
     grid-template-columns: 38px 1fr;
     gap: 14px;
+  }
+}
+
+/* =========================================================
+   CANONICAL BRAND LOCKUP + FOUR-TIER PRICING
+   Final overrides intentionally supersede legacy passes above.
+   ========================================================= */
+
+.brand > .household-wordmark,
+.mobile-menu-brand > .household-wordmark {
+  display: inline-flex;
+}
+
+.mobile-menu-brand {
+  font-weight: 400;
+}
+
+.enter-wordmark {
+  margin: 0 auto 34px;
+  justify-content: center;
+}
+
+.footer-brand .household-wordmark {
+  margin-bottom: 10px;
+}
+
+.membership-inner {
+  width: min(1280px, calc(100% - 56px));
+}
+
+.membership-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.membership-card {
+  min-width: 0;
+  padding: 30px;
+}
+
+@media (max-width: 1180px) and (min-width: 701px) {
+  .membership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .membership-inner {
+    width: calc(100% - 34px);
+  }
+
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-card {
+    padding: 28px 24px;
+  }
+
+  .household-wordmark-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .household-wordmark-name {
+    font-size: 1.12rem;
   }
 }

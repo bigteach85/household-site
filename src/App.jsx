@@ -33,7 +33,7 @@ function App() {
   <a href="#trust">Trust</a>
 </nav>
 
-<a className="sign-in desktop-sign-in" href="#">
+<a className="sign-in desktop-sign-in" href="https://app.householdstudio.com/?mode=signin">
   Sign in
 </a>
 
@@ -93,10 +93,10 @@ function App() {
 
       <a
         className="mobile-enter"
-        href="#"
+        href="https://app.householdstudio.com/?mode=signin"
         onClick={() => setMenuOpen(false)}
       >
-        Enter Household
+        Sign in
       </a>
 
       <p className="mobile-menu-signature">
@@ -517,8 +517,13 @@ function App() {
         Household should never require a household to recreate information it already has.
       </p>
 
-      <a className="bring-it-button" href="#membership">
+      <a className="bring-it-button" href="https://app.householdstudio.com/?mode=join">
         Try Household free
+      </a>
+
+      <a className="hero-link" href="#membership">
+        Compare plans
+        <span aria-hidden="true">↓</span>
       </a>
     </div>
 
@@ -583,7 +588,7 @@ function App() {
               Founding households receive full Care &amp; Prepare access for life,
               at no cost, plus a unique founding leaf on their household.
             </p>
-            <a className="founding-100-button" href="#">Join the Founding 100</a>
+            <a className="founding-100-button" href="https://app.householdstudio.com/?mode=join">Join the Founding 100</a>
           </div>
           <aside className="founding-100-aside">
             <strong>Our next chapter</strong>
@@ -637,7 +642,7 @@ function App() {
           <li>Private sharing with people you trust</li>
         </ul>
 
-        <a className="membership-button secondary" href="#">
+        <a className="membership-button secondary" href="https://app.householdstudio.com/?mode=join">
           Start free
         </a>
       </article>
@@ -671,7 +676,7 @@ function App() {
           <li>Richer household coordination</li>
         </ul>
 
-        <a className="membership-button primary" href="#">
+        <a className="membership-button primary" href="https://app.householdstudio.com/?mode=join">
           Choose Plus
         </a>
       </article>
@@ -702,7 +707,7 @@ function App() {
           <li>Structured care and document workflows</li>
         </ul>
 
-        <a className="membership-button secondary" href="#">
+        <a className="membership-button secondary" href="https://app.householdstudio.com/?mode=join">
           Choose Care &amp; Prepare
         </a>
       </article>
@@ -933,8 +938,8 @@ function App() {
             Then get back to life.
           </p>
 
-          <a className="enter-button" href="#">
-            Enter Household
+          <a className="enter-button" href="https://app.householdstudio.com/?mode=signin">
+            Sign in to household.
           </a>
 
           <p className="enter-signature">

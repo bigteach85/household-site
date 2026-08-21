@@ -4,6 +4,8 @@ import './CommunityCounter.css'
 
 const CONFIRMED_HOUSEHOLD_COUNT = 1
 const FOUNDING_GOAL = 100
+const HOUSEHOLD_COUNT_URL =
+  'https://mauldbsheysonudkebcf.supabase.co/functions/v1/public-household-count'
 
 export default function CommunityCounter() {
   const [mountNode, setMountNode] = useState(null)
@@ -26,7 +28,7 @@ export default function CommunityCounter() {
 
     async function refreshCount() {
       try {
-        const response = await fetch('/api/household-count', {
+        const response = await fetch(HOUSEHOLD_COUNT_URL, {
           headers: { Accept: 'application/json' },
         })
         if (!response.ok) return

@@ -1,0 +1,117 @@
+.story.story--founders {
+  background: #f4f1e8;
+}
+
+.story--founders .story-inner {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(88px, 10vw, 150px) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(48px, 7vw, 104px);
+  align-items: center;
+}
+
+.story--founders .story-copy {
+  max-width: 560px;
+}
+
+.story--founders .story-copy h2 {
+  margin: 18px 0 30px;
+  color: #173d34;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.8rem, 5.4vw, 5.4rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.story--founders .story-copy h2 em {
+  color: #173d34;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.story--founders .story-origin {
+  margin: 0;
+  color: #53645d;
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.72;
+}
+
+.story--founders .story-origin + .story-origin {
+  margin-top: 18px;
+}
+
+.story--founders .story-origin strong {
+  color: #173d34;
+  font-weight: 700;
+}
+
+.story--founders .story-signature {
+  margin: 34px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid #d9d6cc;
+  color: #173d34;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.35;
+}
+
+.story--founders .story-founder-visual {
+  margin: 0;
+  min-width: 0;
+}
+
+.story--founders .story-founder-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.story--founders .story-founder-visual figcaption {
+  margin-top: 16px;
+  display: grid;
+  gap: 3px;
+  color: #69766f;
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.story--founders .story-founder-visual figcaption strong {
+  color: #173d34;
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .story--founders .story-inner {
+    width: min(100% - 36px, 720px);
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 82px 0 92px;
+  }
+
+  .story--founders .story-copy {
+    max-width: 650px;
+  }
+
+  .story--founders .story-founder-visual {
+    margin-inline: -12px;
+  }
+}
+
+@media (max-width: 560px) {
+  .story--founders .story-inner {
+    width: min(100% - 30px, 720px);
+    padding: 68px 0 78px;
+  }
+
+  .story--founders .story-copy h2 {
+    font-size: clamp(2.65rem, 13vw, 4rem);
+  }
+
+  .story--founders .story-origin {
+    font-size: 0.96rem;
+  }
+}

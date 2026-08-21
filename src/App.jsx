@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import "./StorySection.css";
 
 function HouseholdWordmark({ inverse = false, className = "" }) {
   return (
@@ -175,58 +176,42 @@ function App() {
         </div>
       </section>
 
-      <section className="story" id="story">
+      <section className="story story--founders" id="story">
         <div className="story-inner">
-          <div className="story-title">
+          <div className="story-copy">
             <p className="eyebrow dark-eyebrow">WHERE IT STARTED</p>
 
             <h2>
-              It started in
+              We wanted less time managing life.
               <br />
-              <em>our kitchen.</em>
+              <em>And more time living it.</em>
             </h2>
 
-            <figure className="household-illustration household-illustration--coordination" aria-hidden="true">
-              <img
-                src="/images/illustrations/household-coordination.png"
-                alt=""
-              />
-            </figure>
+            <p className="story-origin">
+              <strong>Household started with a simple frustration:</strong> the important parts of family life were scattered everywhere—across spreadsheets, bank accounts, documents, reminders, plans, responsibilities, and the people depending on one another.
+            </p>
+
+            <p className="story-origin">
+              We didn't want another system that gave us more to manage.
+            </p>
+
+            <p className="story-origin">
+              We wanted one calm place that could help us understand what needed attention, take care of it, and get back to our lives.
+            </p>
+
+            <p className="story-signature">20 seconds. Clarity. Back to life.</p>
           </div>
 
-          <div className="story-copy">
-            <p className="story-lead">
-              My wife and I kept having the same conversations about bills.
-            </p>
-
-            <p>
-              Everything felt scattered. Accounts in one place. Bills in another.
-              Spreadsheets we stopped updating. Dozens of apps that never really
-              stuck.
-            </p>
-
-            <p>
-              And because thinking about all of it felt stressful, it became easier
-              to push it out of mind.
-            </p>
-
-            <div className="story-realization">
-              <p>Then I had a different thought:</p>
-
-              <blockquote>
-                What if managing your household didn't make you more anxious?
-                <br />
-                <em>What if it actually made you feel calmer?</em>
-              </blockquote>
-            </div>
-
-            <p>That became Household.</p>
-
-            <p className="story-close">
-              Not another app asking for more attention. A place to understand
-              what matters, see what needs attention, and get back to your life.
-            </p>
-          </div>
+          <figure className="story-founder-visual">
+            <img
+              src="/images/household-founders-life-together.png"
+              alt="Kenny and Shannon enjoying life together at the beach in Vero Beach, Florida."
+            />
+            <figcaption>
+              <strong>Kenny &amp; Shannon · Vero Beach, Florida</strong>
+              <span>The household that started Household.</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 

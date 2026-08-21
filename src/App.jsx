@@ -18,11 +18,11 @@ function App() {
       <header className="site-header">
         <div className="nav-inner">
           <a className="brand" href="/" aria-label="household home"><HouseholdWordmark /></a>
-          <nav className="nav-links"><a href="#life">How it works</a><a href="#people">People</a><a href="#trust">Trust</a><a href="#founding-100">Founding 100</a></nav>
+          <nav className="nav-links"><a href="#life">How it works</a><a href="#people">People</a><a href="/our-story">Our Story</a><a href="#trust">Trust</a><a href="#founding-100">Founding 100</a></nav>
           <a className="sign-in desktop-sign-in" href="https://app.householdstudio.com/?mode=signin">Sign in</a>
           <button className={`mobile-menu-button ${menuOpen ? "is-open" : ""}`} type="button" aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>{!menuOpen ? <span className="menu-symbol" aria-hidden="true"><span></span><span></span></span> : <span className="menu-close">×</span>}</button>
         </div>
-        <div className={`mobile-menu ${menuOpen ? "is-open" : ""}`}><div className="mobile-menu-inner"><div className="mobile-menu-brand"><HouseholdWordmark inverse /></div><nav className="mobile-menu-links"><a href="#life" onClick={() => setMenuOpen(false)}>How it works</a><a href="#people" onClick={() => setMenuOpen(false)}>People</a><a href="#trust" onClick={() => setMenuOpen(false)}>Trust</a><a href="#founding-100" onClick={() => setMenuOpen(false)}>Founding 100</a></nav><a className="mobile-enter" href="https://app.householdstudio.com/?mode=signin" onClick={() => setMenuOpen(false)}>Sign in</a><p className="mobile-menu-signature">20 seconds. Clarity. Back to life.</p></div></div>
+        <div className={`mobile-menu ${menuOpen ? "is-open" : ""}`}><div className="mobile-menu-inner"><div className="mobile-menu-brand"><HouseholdWordmark inverse /></div><nav className="mobile-menu-links"><a href="#life" onClick={() => setMenuOpen(false)}>How it works</a><a href="#people" onClick={() => setMenuOpen(false)}>People</a><a href="/our-story" onClick={() => setMenuOpen(false)}>Our Story</a><a href="#trust" onClick={() => setMenuOpen(false)}>Trust</a><a href="#founding-100" onClick={() => setMenuOpen(false)}>Founding 100</a></nav><a className="mobile-enter" href="https://app.householdstudio.com/?mode=signin" onClick={() => setMenuOpen(false)}>Sign in</a><p className="mobile-menu-signature">20 seconds. Clarity. Back to life.</p></div></div>
       </header>
 
       <section className="hero"><div className="hero-inner hero-layout"><div className="hero-content">
@@ -43,7 +43,7 @@ function App() {
 
       <section className="founding-100" id="founding-100"><div className="founding-100-inner"><div className="founding-100-mark" aria-hidden="true"><span>100</span></div><div className="founding-100-copy"><p className="eyebrow">THE FOUNDING 100 HOUSEHOLDS</p><h2>Help shape Household<br/><em>from the beginning.</em></h2><p>We are inviting our first 100 households to use Household in real family life and help shape what comes next.</p><a className="founding-100-button" href="https://app.householdstudio.com/founding-100">Join the Founding 100</a></div></div></section>
 
-      <footer className="site-footer"><div className="footer-inner"><div className="footer-brand"><div><HouseholdWordmark inverse/><div className="footer-tagline">The people who depend on one another. For a calmer home.</div></div></div><div className="footer-links"><a href="#life">How it works</a><a href="#people">People</a><a href="#trust">Trust</a><a href="#founding-100">Founding 100</a></div><div className="footer-meta"><span>© 2026 Household</span><a href="https://thepierpointgroup.com/" target="_blank" rel="noreferrer">A Pierpoint Group LLC product</a><span>Built for real family life.</span></div></div></footer>
+      <footer className="site-footer"><div className="footer-inner"><div className="footer-brand"><div><HouseholdWordmark inverse/><div className="footer-tagline">The people who depend on one another. For a calmer home.</div></div></div><div className="footer-links"><a href="#life">How it works</a><a href="#people">People</a><a href="/our-story">Our Story</a><a href="#trust">Trust</a><a href="#founding-100">Founding 100</a></div><div className="footer-meta"><span>© 2026 Household</span><a href="https://thepierpointgroup.com/" target="_blank" rel="noreferrer">A Pierpoint Group LLC product</a><span>Built for real family life.</span></div></div></footer>
     </main>
   );
 }

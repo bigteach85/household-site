@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import OurStory from './OurStory.jsx'
@@ -7,8 +7,15 @@ import CommunityCounter from './CommunityCounter.jsx'
 
 const isOurStory = window.location.pathname === '/our-story' || window.location.pathname === '/our-story/'
 
-createRoot(document.getElementById('root')).render(
+const root = document.getElementById('root')
+const app = (
   <StrictMode>
     {isOurStory ? <OurStory /> : <><App /><CommunityCounter /></>}
-  </StrictMode>,
+  </StrictMode>
 )
+
+if (root.hasChildNodes()) {
+  hydrateRoot(root, app)
+} else {
+  createRoot(root).render(app)
+}

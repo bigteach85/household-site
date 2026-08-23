@@ -26,6 +26,7 @@ export default function OurStory() {
         <div className="our-story-copy">
           <p>Bank accounts. Spreadsheets. Documents. Reminders. Responsibilities. And the people depending on us.</p>
           <p>We didn’t want another system that gave us more to manage. We wanted one calm place that could help us understand what needed attention, take care of it, and get back to our lives.</p>
+          <p>Some families can hire someone to carry the administrative weight of household life—to remember what is due, coordinate the right people, and notice problems before they grow. Most families carry that work themselves. Household was created to make intelligent household support accessible to more families, while meeting each family where it is.</p>
           <strong>That became Household.</strong>
         </div>
       </section>

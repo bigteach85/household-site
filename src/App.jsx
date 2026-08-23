@@ -1,6 +1,20 @@
 import { useState } from "react";
 import "./App.css";
 
+function HouseholdWordmark({ inverse = false, className = "" }) {
+  return (
+    <span className={`household-wordmark ${inverse ? "is-inverse" : ""} ${className}`.trim()}>
+      <img
+        className="household-wordmark-mark"
+        src="/images/household-logo.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <span className="household-wordmark-name">household<sup>™</sup></span>
+    </span>
+  );
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -8,13 +22,8 @@ function App() {
     <main>
       <header className="site-header">
   <div className="nav-inner">
-    <a className="brand" href="/" aria-label="Our Household home">
-      <img
-        className="brand-logo"
-        src="/images/household-logo.png"
-        alt=""
-      />
-      <span className="brand-name">our household™</span>
+    <a className="brand" href="/" aria-label="household home">
+      <HouseholdWordmark />
     </a>
 
 <nav className="nav-links">
@@ -49,11 +58,7 @@ function App() {
   <div className={`mobile-menu ${menuOpen ? "is-open" : ""}`}>
     <div className="mobile-menu-inner">
       <div className="mobile-menu-brand">
-        <img
-          src="/images/household-logo.png"
-          alt=""
-        />
-        <span>our household™</span>
+        <HouseholdWordmark inverse />
       </div>
 
       <nav className="mobile-menu-links">
@@ -701,6 +706,87 @@ function App() {
           Choose Care &amp; Prepare
         </a>
       </article>
+
+      <article className="membership-card membership-complete">
+        <div className="membership-card-top">
+          <p className="membership-label">COMPLETE</p>
+
+          <div className="membership-price">
+            <span className="price">$18</span>
+            <span className="price-period">/ month</span>
+          </div>
+
+          <p className="membership-description">
+            More active help for households that want deeper automation,
+            monitoring, and support.
+          </p>
+        </div>
+
+        <ul className="membership-features">
+          <li>Everything in Care &amp; Prepare</li>
+          <li>Transaction Watch</li>
+          <li>Advanced household automation</li>
+          <li>Expanded document storage</li>
+          <li>Deeper care and professional workflows</li>
+          <li>Advanced household monitoring</li>
+          <li>Priority household support</li>
+        </ul>
+
+        <a className="membership-button secondary" href="#">
+          Choose Complete
+        </a>
+      </article>
+    </div>
+
+    <div className="membership-explainers">
+      <details className="membership-explainer">
+        <summary>
+          <span><small>PRICING PRINCIPLE</small>Why does household charge?</span>
+          <i aria-hidden="true" />
+        </summary>
+        <div className="membership-explainer-body membership-why-copy">
+          <h3>Affordable for families. <em>Sustainable for the long run.</em></h3>
+        <p>
+          Running household requires secure infrastructure, reliable financial
+          connections, document storage, privacy protections, and ongoing
+          support. Those services have real operating costs, and our founder
+          cannot subsidize them alone.
+        </p>
+
+        <p>
+          But managing family life should not become another expensive monthly
+          burden. Especially in today&apos;s fragile economy, we believe charging
+          families $40 a month just to feel organized would be unreasonable.
+        </p>
+
+        <p>
+          household is priced to remain dependable and sustainable while staying
+          within reach of the people it was created to serve.
+        </p>
+
+        <strong>Managing a household should be affordable for every household.</strong>
+
+        <small>
+          Your membership helps keep household private, dependable, and
+          independent—without selling your family&apos;s attention or personal
+          information.
+        </small>
+        </div>
+      </details>
+
+      <details className="membership-explainer">
+        <summary>
+          <span><small>ONE FAMILIAR EXPERIENCE</small>Will household look different on another membership?</span>
+          <i aria-hidden="true" />
+        </summary>
+        <div className="membership-explainer-body">
+          <h3>The same household, with more help when you want it.</h3>
+          <p>Every membership uses the same calm household experience. Your people, relationships, information, and primary household areas remain in familiar places.</p>
+          <p>Additional memberships add capabilities such as automation, advanced preparedness, Care Team collaboration, and Transaction Watch. When something is not included in your current membership, household will calmly explain what it does and which membership includes it.</p>
+          <p>Nothing you have already added disappears if your membership changes.</p>
+          <strong>Membership adds support. It does not divide the household experience.</strong>
+        </div>
+      </details>
     </div>
 
     <div className="membership-principle">
@@ -834,13 +920,7 @@ function App() {
 
       <section className="enter">
         <div className="enter-inner">
-          <img
-            className="enter-logo"
-            src="/images/household-logo.png"
-            alt=""
-          />
-
-          <p className="eyebrow">OUR HOUSEHOLD™</p>
+          <HouseholdWordmark inverse className="enter-wordmark" />
 
           <h2>
             A calmer home starts
@@ -866,14 +946,8 @@ function App() {
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-brand">
-            <img
-              className="footer-logo"
-              src="/images/household-logo.png"
-              alt=""
-            />
-
             <div>
-              <div className="footer-name">our household™</div>
+              <HouseholdWordmark inverse />
               <div className="footer-tagline">
                 The people who depend on one another. For a calmer home.
               </div>

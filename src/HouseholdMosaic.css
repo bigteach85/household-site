@@ -43,14 +43,31 @@
   line-height: 1.7;
 }
 
+.public-household-mosaic-preview-label {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  margin: 54px 0 0;
+  padding: 9px 13px;
+  border: 1px solid rgba(183, 255, 84, .3);
+  border-radius: 999px;
+  background: rgba(183, 255, 84, .08);
+  color: #d8ff9f;
+  font-size: .72rem;
+  font-weight: 750;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
 .public-household-mosaic-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 12px;
-  margin-top: 64px;
+  margin-top: 18px;
 }
 
 .public-household-mosaic-grid figure {
+  position: relative;
   aspect-ratio: 1;
   margin: 0;
   overflow: hidden;
@@ -73,6 +90,23 @@
 
 .public-household-mosaic-grid figure:hover img {
   transform: scale(1.025);
+}
+
+.public-household-mosaic-grid figcaption {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 6px 8px 5px;
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 999px;
+  background: rgba(5, 31, 26, .84);
+  color: #fff;
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  line-height: 1;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
 }
 
 .public-household-mosaic-empty {
@@ -125,11 +159,17 @@
   .public-household-mosaic-inner { width: calc(100% - 34px); }
   .public-household-mosaic header { grid-template-columns: 1fr; gap: 24px; }
   .public-household-mosaic header .eyebrow { grid-column: auto; margin: 0; }
-  .public-household-mosaic-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 42px; }
+  .public-household-mosaic-preview-label { margin-top: 40px; }
+  .public-household-mosaic-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .public-household-mosaic-empty { align-items: flex-start; padding: 24px; }
 }
 
 @media (max-width: 480px) {
+  .public-household-mosaic-preview-label {
+    font-size: .63rem;
+    letter-spacing: .035em;
+  }
   .public-household-mosaic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .public-household-mosaic-grid figcaption { right: 6px; bottom: 6px; font-size: .52rem; }
   .public-household-mosaic-empty > span { width: 58px; height: 58px; font-size: 2rem; }
 }

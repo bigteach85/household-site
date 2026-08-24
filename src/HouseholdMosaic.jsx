@@ -10,6 +10,12 @@ const ILLUSTRATIVE_PHOTOS = [
   '/images/mosaic/illustrative-household-04.webp',
   '/images/mosaic/illustrative-household-05.webp',
   '/images/mosaic/illustrative-household-06.webp',
+  '/images/mosaic/illustrative-household-07.webp',
+  '/images/mosaic/illustrative-household-08.webp',
+  '/images/mosaic/illustrative-household-09.webp',
+  '/images/mosaic/illustrative-household-10.webp',
+  '/images/mosaic/illustrative-household-11.webp',
+  '/images/mosaic/illustrative-household-12.webp',
 ].map((imageUrl, index) => ({
   id: `illustrative-household-${index + 1}`,
   image_url: imageUrl,
@@ -81,7 +87,12 @@ export default function HouseholdMosaic() {
                     : 'An owner-approved portrait from a participating Household family'}
                   loading="lazy"
                 />
-                {photo.illustrative && <figcaption>AI illustration</figcaption>}
+                {photo.illustrative && (
+                  <figcaption aria-label="AI illustration">
+                    <span className="public-household-mosaic-caption-long">AI illustration</span>
+                    <span className="public-household-mosaic-caption-short" aria-hidden="true">AI</span>
+                  </figcaption>
+                )}
               </figure>
             ))}
           </div>

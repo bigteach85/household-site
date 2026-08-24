@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import "./StorySection.css";
+import HouseholdMosaic from "./HouseholdMosaic";
 
 function HouseholdWordmark({ inverse = false, className = "" }) {
   return (
@@ -40,6 +41,8 @@ function App() {
       <section className="product-experience"><div className="product-experience-inner"><div className="product-intro"><p className="eyebrow dark-eyebrow">YOUR HOUSEHOLD, TOGETHER</p><h2>Everything that matters at home.<br/><em>One understandable picture.</em></h2></div><div className="product-devices-premium"><div className="device-laptop"><div className="device-laptop-screen"><img src="/images/household-dashboard-desktop.png" alt="Household Family Picture dashboard on desktop."/></div><div className="device-laptop-base"><div className="device-laptop-notch"></div></div></div><div className="device-phone"><div className="device-phone-speaker"></div><div className="device-phone-screen"><img src="/images/household-dashboard-mobile.png" alt="Household Family Picture on mobile."/></div></div></div><p className="product-note">Your household when you need it.<br/><em>Your life when you don't.</em></p></div></section>
 
       <section className="network" id="people"><div className="network-inner"><div><p className="eyebrow dark-eyebrow">THE RELATIONSHIP-CENTERED DIFFERENCE</p><h2>People are not<br/><em>seats.</em></h2><figure className="household-illustration household-illustration--companionship" aria-hidden="true"><img src="/images/illustrations/household-companionship.png" alt=""/></figure></div><div className="network-copy"><p className="network-lead">Most family apps organize what families do. Household is built to understand who depends on whom—and connect responsibilities, money, documents, care and next steps around those relationships.</p><p>Household is not another family organizer or digital filing cabinet. It is an emerging relationship-centered understanding layer for everyday family life.</p><p className="network-statement">Adding Grandma shouldn't carry a price tag.</p></div></div></section>
+
+      <HouseholdMosaic />
 
       <section className="trust-section" id="trust"><div className="trust-inner"><div><p className="eyebrow dark-eyebrow">TRUST & PRIVACY</p><h2>Your household should feel<br/><em>private by default.</em></h2></div><div className="trust-copy"><div className="trust-points"><div className="trust-point"><span>01</span><div><h3>Your household is yours.</h3></div></div><div className="trust-point"><span>02</span><div><h3>Access follows relationships.</h3></div></div><div className="trust-point"><span>03</span><div><h3>Useful, then quiet.</h3></div></div></div></div></div></section>
 

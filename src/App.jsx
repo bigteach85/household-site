@@ -26,7 +26,7 @@ function App() {
       </header>
 
       <section className="hero"><div className="hero-inner hero-layout"><div className="hero-content">
-        <p className="eyebrow">The relationship-centered family life platform built for everyday households.</p>
+        <p className="eyebrow">The relationship-centered family life platform.</p>
         <h1>The people who depend<br/><em>on one another.</em></h1>
         <p className="hero-copy">One calming place for the people, money, documents, responsibilities, and care your household depends on.</p>
         <a className="bring-it-button" href="https://app.householdstudio.com/?mode=join">Try Household free</a>
